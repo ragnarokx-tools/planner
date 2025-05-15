@@ -4,7 +4,7 @@ import jobData from './resources/skills.json'
 import Job from './job/Job.js';
 
 function App() {
-  const [job, setJob] = useState(null);
+  const [job, setJob] = useState("Knight");
 
   const jobHandler = (jobName) => {
     return _ => setJob(jobName)

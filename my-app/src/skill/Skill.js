@@ -8,7 +8,7 @@ function Skill({ data: skillData, skillState, updateSkill }) {
 
   const skillName = skillData.name
   const currentValue = skillState[skillName] ? Math.max(skillState[skillName], 0) : 0
-  let increase;
+  let increase, decrease;
 
   const handleClick = (value) => {
     return () => {
@@ -21,10 +21,8 @@ function Skill({ data: skillData, skillState, updateSkill }) {
   }
 
   const satisfiesRequirements = () => {
-    console.log(skillData.requires)
     if (skillData.requires) {
       const {name, level} = skillData.requires
-      console.log(name, level)
       return (skillState[name] && skillState[name] >= level)
     } else {
         return true
@@ -32,20 +30,27 @@ function Skill({ data: skillData, skillState, updateSkill }) {
   }
 
   if (currentValue < skillData.max && satisfiesRequirements()) {
-    increase = <b onClick={handleClick(1)}>+</b>
+    increase = <button onClick={handleClick(1)}>+</button>
   } else {
-    increase = <b>x</b>
+    increase = <button disabled={true}>+</button>
   }
 
+  if (currentValue === 0) {
+    decrease = <button disabled={true}>-</button>
+  } else {
+    decrease = <button onClick={handleClick(-1)}>-</button>
+  }
 
   return (
     <div className="Skill">
-        <div className="Skill-icon">icon</div>
-        <div className="Skill-name">{skillData.name}</div>
-        <div className="Skill-modifiers">
-            {increase}
-            <b>{currentValue}</b>
-            <b onClick={handleClick(-1)}>-</b>
+        <div className="Skill-icon">{skillData.name}</div>
+        <div className="Skill-details">
+            <div className="Skill-name">{skillData.name}</div>
+            <div className="Skill-modifiers">
+                {increase}
+                <div className="Skill-value">{currentValue}/{skillData.max}</div>
+                {decrease}
+            </div>
         </div>
     </div>
   );
