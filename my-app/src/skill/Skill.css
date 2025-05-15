@@ -1,0 +1,45 @@
+.Skill {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+.Skill-icon {
+  width: 50px;
+  height: 50px;
+  text-overflow: clip;
+  overflow: hidden;
+  outline: solid 1px black;
+}
+
+.Skill-details {
+  display: flex;
+  flex-direction:column;
+  margin-left:5%;
+  margin-right:5%;
+  text-align: left;
+  flex: 1;
+}
+
+.Skill-name {
+  font-size: 12px;
+  flex:2;
+}
+
+.Skill-value {
+  text-align: center;
+  padding-left: 4px;
+  padding-right: 4px;
+  flex: 1;
+}
+
+.Skill-modifiers {
+  display: flex;
+  flex:1
+}
+
+.Skill-modifiers button {
+  flex: 1;
+}
