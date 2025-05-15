@@ -1,0 +1,32 @@
+{
+    "jobs": 
+    [{
+        "name": "job1",
+        "skills": [
+            {
+                "name": "skill1",
+                "max": 10,
+                "prereq": {}
+            },
+            {
+                "name": "skill2",
+                "max": 10,
+                "prereq": {"skill1": 5}
+            }]
+    },
+    {
+        
+        "name": "job2",
+        "skills": [
+            {
+                "name": "skilla",
+                "max": 5,
+                "prereq": {}
+            },
+            {
+                "name": "skillb",
+                "max": 10,
+                "prereq": {"skilla": 1}
+            }]
+    }]
+}

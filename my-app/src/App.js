@@ -1,23 +1,38 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import jobData from './resources/skills.json'
+import Job from './job/Job.js';
 
 function App() {
+  const [job, setJob] = useState(null);
+
+  const jobHandler = (jobName) => {
+    return _ => setJob(jobName)
+  }
+
+  const renderJobs = (data) => {
+    if (!data) {
+      return null
+    } else {
+      const listOfJobs = data.jobs.map(jobObject => {
+        return (<li onClick={jobHandler(jobObject.name)}>{jobObject.name}</li>)
+      })
+      return <ul>{listOfJobs}</ul>
+    }
+  }
+
+  const getJobByName = (jobName, jobDataJobs) => {
+    return jobDataJobs.find((job) => jobName === job.name)
+  }
+
+  if (!jobData) {
+    return <div>Loading static data... Try reloading if it doesn't work.</div>
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {renderJobs (jobData)}
+      { job ?  <Job name={job} data={getJobByName(job, jobData.jobs)} /> : null }
     </div>
   );
 }
