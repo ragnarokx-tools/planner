@@ -12,6 +12,10 @@ function Job({name, data}) {
       [name]: value
     }));
 
+  const reset = () => {
+    return <div onClick={() => setSkills({})}>reset</div>
+  }
+
   const renderSkills = (jobData) => {
     if (!jobData) {
       return <div>couldn't find skills</div>
@@ -35,6 +39,7 @@ function Job({name, data}) {
     <div className="Job">
       <div><b>{name}</b></div>
       {renderSkills(data.skills)}
+      {reset()}
     </div>
   )
 }

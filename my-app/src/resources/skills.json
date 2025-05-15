@@ -5,13 +5,12 @@
         "skills": [
             {
                 "name": "skill1",
-                "max": 10,
-                "prereq": {}
+                "max": 10
             },
             {
                 "name": "skill2",
                 "max": 10,
-                "prereq": {"skill1": 5}
+                "requires": {"name": "skill1", "level": 5}
             }]
     },
     {
@@ -20,13 +19,12 @@
         "skills": [
             {
                 "name": "skilla",
-                "max": 5,
-                "prereq": {}
+                "max": 5
             },
             {
                 "name": "skillb",
                 "max": 10,
-                "prereq": {"skilla": 1}
+                "requires": {"name": "skilla", "level": 1}
             }]
     }]
 }

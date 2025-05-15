@@ -20,11 +20,18 @@ function Skill({ data: skillData, skillState, updateSkill }) {
     }
   }
 
-  const hasPrereqs = () => {
-    return true
+  const satisfiesRequirements = () => {
+    console.log(skillData.requires)
+    if (skillData.requires) {
+      const {name, level} = skillData.requires
+      console.log(name, level)
+      return (skillState[name] && skillState[name] >= level)
+    } else {
+        return true
+    }
   }
 
-  if (currentValue < skillData.max && hasPrereqs()) {
+  if (currentValue < skillData.max && satisfiesRequirements()) {
     increase = <b onClick={handleClick(1)}>+</b>
   } else {
     increase = <b>x</b>
