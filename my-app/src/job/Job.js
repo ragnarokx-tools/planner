@@ -5,8 +5,9 @@ import "./job.css"
 
 
 
-function Job({name, data}) {
-  const [skillLevels, setSkills] = useState({});
+function Job({data: jobData, skillLevels, setSkills}) {
+
+  const {name} = jobData
 
   const modifySpecificSkill = (skillObject) => 
     (value) => setSkills(prevSkills => {
@@ -17,19 +18,16 @@ function Job({name, data}) {
       }
     })
 
-  // const clearSpecificSkill = (skillObject, allSkillList) =>
-  //   () => setSkills(prevSkills => {
-  //     const {id} = skillObject
-  //     const prevCopy = Object.copy(prevSkills)
-  //     prevCopy[id] = 0
-  //     let affected = [id]
-  //     allSkillList.foreach(skill => {
-
-  //     })
-  //   })
+  const handleResetSkills = () => {
+    if (window.confirm("Are you sure you want to reset all skills?")) {
+      // Proceed with submission
+      setSkills({})
+    } else {
+    }  
+  }
 
   const renderResetButton = () => {
-    return <button onClick={() => setSkills({})}>reset</button>
+    return <button onClick={handleResetSkills}>reset</button>
   }
 
   /* 
@@ -73,7 +71,7 @@ function Job({name, data}) {
     }
   } 
 
-  if (!data) {
+  if (!jobData) {
     return <div>no data for {name}</div>
   }
 
@@ -84,7 +82,7 @@ function Job({name, data}) {
         {renderResetButton()}
       </div>
       {renderTotalSkillPointsUsed()}
-      {renderSkills(data.layout, data.skills)}
+      {renderSkills(jobData.layout, jobData.skills)}
     </div>
   )
 }

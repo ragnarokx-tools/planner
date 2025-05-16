@@ -233,5 +233,41 @@
                 "max": 10
             }
         ]
+    },{
+      "id": 2,
+      "name": "Crusader"
+    },{
+      "id": 3,
+      "name": "Wizard"
+    },{
+      "id": 4,
+      "name": "Sage"
+    },{
+      "id": 5,
+      "name": "Blacksmith"
+    },{
+      "id": 6,
+      "name": "Alchemist"
+    },{
+      "id": 7,
+      "name": "Assassin"
+    },{
+      "id": 8,
+      "name": "Rogue"
+    },{
+      "id": 12,
+      "name": "Priest"
+    },{
+      "id": 13,
+      "name": "Monk"
+    },{
+      "id": 9,
+      "name": "Hunter"
+    },{
+      "id": 10,
+      "name": "Bard"
+    },{
+      "id": 11,
+      "name": "Dancer"
     }]
 }

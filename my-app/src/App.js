@@ -1,13 +1,24 @@
 import { useState } from 'react';
 import './App.css';
-import jobData from './resources/skills.json'
+import allJobsAndSkillsData from './resources/skills.json'
 import Job from './job/Job.js';
 
 function App() {
   const [job, setJob] = useState("Knight");
+  const [skillLevels, setSkills] = useState({});
 
-  const jobHandler = (jobName) => {
-    return _ => setJob(jobName)
+  const onClickJobHandler = (jobName) => {
+    return (_ => {
+      if (Object.keys(skillLevels).length !== 0) {
+        if (window.confirm("Changing job will reset all skills. Continue?")) {
+          setSkills({})
+          setJob(jobName)
+        }
+      } else {
+        setSkills({})
+        setJob(jobName)
+      }
+    })
   }
 
   const renderJobs = (data) => {
@@ -15,24 +26,29 @@ function App() {
       return null
     } else {
       const listOfJobs = data.jobs.map(jobObject => {
-        return (<li onClick={jobHandler(jobObject.name)}>{jobObject.name}</li>)
+        return (
+        <div 
+          className="App-jobOption"
+          onClick={onClickJobHandler(jobObject.name)}>
+            {jobObject.name}
+        </div>)
       })
-      return <ul>{listOfJobs}</ul>
+      return <div className="App-jobList">{listOfJobs}</div>
     }
   }
 
-  const getJobByName = (jobName, jobDataJobs) => {
-    return jobDataJobs.find((job) => jobName === job.name)
+  const getJobDataByName = (jobName, allJobsAndSkillsDataJobs) => {
+    return allJobsAndSkillsDataJobs.find((job) => jobName === job.name)
   }
 
-  if (!jobData) {
+  if (!allJobsAndSkillsData) {
     return <div>Loading static data... Try reloading if it doesn't work.</div>
   }
 
   return (
     <div className="App">
-      {renderJobs (jobData)}
-      { job ?  <Job name={job} data={getJobByName(job, jobData.jobs)} /> : null }
+      {renderJobs (allJobsAndSkillsData)}
+      { job ?  <Job data={getJobDataByName(job, allJobsAndSkillsData.jobs)} skillLevels={skillLevels} setSkills={setSkills} /> : null }
     </div>
   );
 }

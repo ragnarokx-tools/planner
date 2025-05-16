@@ -60,9 +60,14 @@ function Skill({ data: skillData, skillLevelData, updateSkill }) {
     decrementButton = <button disabled={true}>-</button>
   }
 
+  // not working
+  const skillIcon = () => {
+    return <img alt={skillName} href={`%PUBLIC_URL%/skillicons/${id}.png`}/>
+  }
+
   return (
     <div className="Skill">
-        <div className="Skill-icon">{skillName}</div>
+        <div className="Skill-icon">{skillIcon()}</div>
         <div className="Skill-details">
             <div className="Skill-name">{skillName}</div>
             <div className="Skill-modifiers">

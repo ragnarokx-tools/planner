@@ -7,8 +7,9 @@
 }
 
 .Skill-icon {
-  width: 15vw;
-  height: 15vw;
+  width: 15vmin;
+  max-width: 100px;
+  aspect-ratio: 1;
   text-overflow: clip;
   overflow: hidden;
   outline: solid 1px black;
@@ -24,17 +25,17 @@
 }
 
 .Skill-name {
-  font-size: calc(8px + 2vmin);
-  margin-top: 1vw;
-  margin-bottom: 1vw;
+  font-size: calc(min(8px + 2vmin, 16px));
+  margin-top: 1vmin;
+  margin-bottom: 1vmin;
   flex:2;
 }
 
 .Skill-value {
-  font-size: calc(8px + 2vmin);
+  font-size: calc(min(8px + 2vmin, 16px));
   text-align: center;
-  padding-left: 2vw;
-  padding-right: 2vw;
+  padding-left: 2vmin;
+  padding-right: 2vmin;
 }
 
 .Skill-modifiers {

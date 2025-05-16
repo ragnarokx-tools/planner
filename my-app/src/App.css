@@ -1,8 +1,24 @@
 .App {
   text-align: center;
-  width: 100vw;
+  align-content: top;
+  max-width: 688px;
   height: 100vh;
+  margin: auto;
   touch-action: manipulation;
+}
+
+.App-jobOption {
+  width: 12vmin;
+  margin: auto;
+  margin-bottom: 2vmin;
+  aspect-ratio: 1;
+  border: solid 2px black;
+}
+
+.App-jobList {
+  margin:auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .App-logo {
