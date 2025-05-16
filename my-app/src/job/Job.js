@@ -8,17 +8,34 @@ import "./job.css"
 function Job({name, data}) {
   const [skillLevels, setSkills] = useState({});
 
-  const modifySpecificSkill = (name) => 
-    (value) => setSkills(prevSkills => ({
-      ...prevSkills,
-      [name]: value
-    }));
+  const modifySpecificSkill = (skillObject) => 
+    (value) => setSkills(prevSkills => {
+      const {id, max} = skillObject
+      return {
+        ...prevSkills,
+        [id]: Math.max(Math.min(max, value),0),
+      }
+    })
 
-  const reset = () => {
+  // const clearSpecificSkill = (skillObject, allSkillList) =>
+  //   () => setSkills(prevSkills => {
+  //     const {id} = skillObject
+  //     const prevCopy = Object.copy(prevSkills)
+  //     prevCopy[id] = 0
+  //     let affected = [id]
+  //     allSkillList.foreach(skill => {
+
+  //     })
+  //   })
+
+  const renderResetButton = () => {
     return <button onClick={() => setSkills({})}>reset</button>
   }
 
-  const totalSkillPoints = () => {
+  /* 
+    Renders a display of total skill points
+  */
+  const renderTotalSkillPointsUsed = () => {
     let sum = 0;
     if(skillLevels) {
       Object.values(skillLevels).map((level) => 
@@ -37,25 +54,21 @@ function Job({name, data}) {
           const skillObject = jobData.find(obj => obj.id === skillId)
           return <Skill 
             data={skillObject} 
-            skillState={skillLevels}
-            updateSkill={modifySpecificSkill(skillObject.name)}
+            skillLevelData={skillLevels}
+            updateSkill={modifySpecificSkill(skillObject)}
           />
-        } else if (skillId === -2) {
-          return (<div className="Job-spacer">
-              <div className="Job-connector"/>
-              <div className="Job-emptySpace"/>
-            </div>)
+        } else if (skillId < 0) {
+          if (skillId === -2) {
+            return <div className="Job-connector"/>
+          } else if (skillId === -3) {
+            return <div className="Job-connector"><hr/></div>
+          } else if (skillId === -1) {
+            return <div className="Job-spacer"><hr/></div>
+          }
         } else {
-          return <div className="Job-spacer"/>
+          return <div className="Job-spacer"></div>
         }
       })
-      // const skills = jobData.map(skillObject => {
-      //   return <Skill 
-      //     data={skillObject} 
-      //     skillState={skillLevels}
-      //     updateSkill={modifySpecificSkill(skillObject.name)}
-      //   />
-      // })
       return <div className="Job-skillGrid">{layoutItems}</div>
     }
   } 
@@ -68,9 +81,9 @@ function Job({name, data}) {
     <div className="Job">
       <div>
         <b>{name}</b> 
-        {reset()}
+        {renderResetButton()}
       </div>
-      {totalSkillPoints()}
+      {renderTotalSkillPointsUsed()}
       {renderSkills(data.layout, data.skills)}
     </div>
   )

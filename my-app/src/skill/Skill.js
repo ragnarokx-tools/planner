@@ -1,55 +1,74 @@
 import './Skill.css';
 
-function Skill({ data: skillData, skillState, updateSkill }) {
+function Skill({ data: skillData, skillLevelData, updateSkill }) {
 
   if (!skillData) {
     return <div>no data found for skill</div>
   }
 
-  const skillName = skillData.name
-  const currentValue = skillState[skillName] ? Math.max(skillState[skillName], 0) : 0
-  let increase, decrease;
+  const {
+    id, 
+    name: skillName, 
+    max, 
+    nextId, 
+    nextLevel, 
+    prevId, 
+    prevLevel
+  } = skillData;
+  const currentValue = skillLevelData[id] ? skillLevelData[id] : 0
+  let incrementButton, decrementButton;
 
-  const handleClick = (value) => {
+  const handleIncrement = (increment) => {
     return () => {
       if (!currentValue) {
-        updateSkill(Math.max(value, 0))
+        updateSkill(increment)
       } else {
-        updateSkill(Math.max(currentValue + value, 0))
+        updateSkill(currentValue + increment)
       }
     }
   }
 
-  const satisfiesRequirements = () => {
-    if (skillData.requires) {
-      const {name, level} = skillData.requires
-      return (skillState[name] && skillState[name] >= level)
+  const canIncrease = () => {
+    if (prevId) {
+      return (skillLevelData[prevId] && skillLevelData[prevId] >= prevLevel)
     } else {
         return true
     }
   }
 
-  if (currentValue < skillData.max && satisfiesRequirements()) {
-    increase = <button onClick={handleClick(1)}>+</button>
-  } else {
-    increase = <button disabled={true}>+</button>
+  const canDecrease = () => {
+    if (nextId) {
+      if (skillLevelData[nextId]) {
+        return (skillLevelData[nextId] > 0 && currentValue > nextLevel)
+      } else {
+        return true
+      }
+    } else {
+      return true
+    }
   }
 
-  if (currentValue === 0) {
-    decrease = <button disabled={true}>-</button>
+  if (currentValue < max && canIncrease()) {
+    incrementButton = <button onClick={handleIncrement(1)}>+</button>
   } else {
-    decrease = <button onClick={handleClick(-1)}>-</button>
+    incrementButton = <button disabled={true}>+</button>
+  }
+
+  if (currentValue > 0 && canDecrease()) {
+    decrementButton = <button onClick={handleIncrement(-1)}>-</button>
+  } else {
+    decrementButton = <button disabled={true}>-</button>
   }
 
   return (
     <div className="Skill">
-        <div className="Skill-icon">{skillData.name}</div>
+        <div className="Skill-icon">{skillName}</div>
         <div className="Skill-details">
-            <div className="Skill-name">{skillData.name}</div>
+            <div className="Skill-name">{skillName}</div>
             <div className="Skill-modifiers">
-                {increase}
-                <div className="Skill-value">{currentValue}/{skillData.max}</div>
-                {decrease}
+                {decrementButton}
+                <div className="Skill-value">{currentValue}/{max}</div>
+                {incrementButton}
             </div>
         </div>
     </div>
