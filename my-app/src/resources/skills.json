@@ -155,6 +155,8 @@
                 "id": 1018,
                 "name": "Cavalry Mastery",
                 "max": 10,
+                "nextId": 1022,
+                "nextLevel": 5,
                 "prevId": 1015,
                 "prevLevel": 5
             },
@@ -166,22 +168,30 @@
             {
                 "id": 1020,
                 "name": "Aura Blade",
-                "max": 10
+                "max": 10,
+                "nextId":1023,
+                "nextLevel":5
             },
             {
                 "id": 1021,
                 "name": "Spiral Pierce",
-                "max": 10
+                "max": 10,
+                "prevId": 1017,
+                "prevLevel": 5
             },
             {
                 "id": 1022,
                 "name": "Brandish Spear",
-                "max": 10
+                "max": 10,
+                "prevId": 1018,
+                "prevLevel": 5
             },
             {
                 "id": 1023,
                 "name": "Head Crush",
-                "max": 10
+                "max": 10,
+                "prevId": 1020,
+                "prevLevel": 5
             },
             {
                 "id": 1024,
@@ -191,7 +201,9 @@
             {
                 "id": 1025,
                 "name": "Call of Justice",
-                "max": 10
+                "max": 10,
+                "nextId":1028,
+                "nextLevel":5
             },
             {
                 "id": 1026,
@@ -206,7 +218,9 @@
             {
                 "id": 1028,
                 "name": "Self-Ignite",
-                "max": 10
+                "max": 10,
+                "prevId":1025,
+                "prevLevel":5
             },
             {
                 "id": 1029,
