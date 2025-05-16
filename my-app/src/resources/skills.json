@@ -1,25 +1,47 @@
 {
     "jobs": 
     [{
-        "id": 0,
+        "id": 1,
         "name": "Knight",
         "layout":
             [1000, 1002, 1003,
-            -2, -1, -1, 
+            -2, 0, -2, 
             1001, 1006, 1004, 
-            -1, -1, -2, 
-            1005, 1007, -2],
+            0, 0, -2, 
+            1005, 1007, -2,
+            -1, -3, -3,
+            1008, 1009, 1010,
+            -2, -2, 0,
+            1011, 1012, 1013,
+            -2, 0, 0,
+            1014, 1015, 1016,
+            -2 , -2, 0,
+            1017, 1018, 1019,
+            -2, -2, 0,
+            -2, -2, 1020,
+            -3, -3, -3,
+            1021, 1022, 1023,
+            0, 0, 0,
+            1024, 1025, 1026,
+            0, -2, 0,
+            1027, 1028, 1029,
+            0, 0, 0,
+            1030
+        ],
         "skills": [
             {
                 "id": 1000,
                 "name": "Bash",
-                "max": 10
+                "max": 10,
+                "nextId": 1001,
+                "nextLevel": 5
             },
             {
                 "id": 1001,
                 "name": "Fatal Blow",
                 "max": 5,
-                "requires": {"name": "Bash", "level": 5}
+                "prevId": 1000,
+                "prevLevel": 5
             },
             {
                 "id": 1002,
@@ -29,13 +51,18 @@
             {
                 "id": 1003,
                 "name": "Provoke",
-                "max": 10
+                "max": 10,
+                "nextId": 1004,
+                "nextLevel": 5
             },
             {
                 "id": 1004,
                 "name": "Endure",
                 "max": 10,
-                "requires": {"name": "Provoke", "level": 5}
+                "prevId": 1003,
+                "prevLevel": 5,
+                "nextId": 1010,
+                "nextLevel": 3
             },
             {
                 "id": 1005,
@@ -50,7 +77,9 @@
             {
                 "id": 1007,
                 "name": "Sword Mastery",
-                "max": 10
+                "max": 10,
+                "nextId": 1009,
+                "nextLevel": 5
             },
             {
                 "id": 1008,
@@ -61,7 +90,133 @@
                 "id": 1009,
                 "name": "Sword Speed Boost",
                 "max": 10,
-                "requires": {"name": "Sword Mastery", "level": 5}
+                "prevId": 1007,
+                "prevLevel": 5,
+                "nextId": 1012,
+                "nextLevel": 5
+            },
+            {
+                "id": 1010,
+                "name": "Steel Heart",
+                "max": 10,
+                "prevId": 1004,
+                "prevLevel": 3
+            },
+            {
+                "id": 1011,
+                "name": "Pierce",
+                "max": 10,
+                "prevId": 1008,
+                "prevLevel": 5,
+                "nextId": 1014,
+                "nextLevel": 5
+            },
+            {
+                "id": 1012,
+                "name": "Double Blow",
+                "max": 10,
+                "prevId": 1009,
+                "prevLevel": 5
+            },
+            {
+                "id": 1013,
+                "name": "Auto Counter",
+                "max": 10
+            },
+            {
+                "id": 1014,
+                "name": "Spear Stab",
+                "max": 10,
+                "prevId": 1011,
+                "prevLevel": 5,
+                "nextId": 1017,
+                "nextLevel": 5
+            },
+            {
+                "id": 1015,
+                "name": "Cavalry Combat",
+                "max": 5,
+                "nextId": 1009,
+                "nextLevel": 5
+            },
+            {
+                "id": 1016,
+                "name": "Bowling Bash",
+                "max": 10
+            },
+            {
+                "id": 1017,
+                "name": "Spear Boomerang",
+                "max": 10,
+                "prevId": 1014,
+                "prevLevel": 5
+            },
+            {
+                "id": 1018,
+                "name": "Cavalry Mastery",
+                "max": 10,
+                "prevId": 1015,
+                "prevLevel": 5
+            },
+            {
+                "id": 1019,
+                "name": "Charge Attack",
+                "max": 10
+            },
+            {
+                "id": 1020,
+                "name": "Aura Blade",
+                "max": 10
+            },
+            {
+                "id": 1021,
+                "name": "Spiral Pierce",
+                "max": 10
+            },
+            {
+                "id": 1022,
+                "name": "Brandish Spear",
+                "max": 10
+            },
+            {
+                "id": 1023,
+                "name": "Head Crush",
+                "max": 10
+            },
+            {
+                "id": 1024,
+                "name": "Lord's Aura",
+                "max": 10
+            },
+            {
+                "id": 1025,
+                "name": "Call of Justice",
+                "max": 10
+            },
+            {
+                "id": 1026,
+                "name": "Weapon Blocking",
+                "max": 10
+            },
+            {
+                "id": 1027,
+                "name": "Joint Beat",
+                "max": 10
+            },
+            {
+                "id": 1028,
+                "name": "Self-Ignite",
+                "max": 10
+            },
+            {
+                "id": 1029,
+                "name": "Concentration",
+                "max": 10
+            },
+            {
+                "id": 1030,
+                "name": "Berserk",
+                "max": 10
             }
         ]
     }]
