@@ -20,8 +20,8 @@
 .Job .Job-skillGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: 90vw;
-  margin-left: 5vw;
-  margin-right: 5vw;
-  margin-bottom: 5vh;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
 }
