@@ -7,18 +7,10 @@
 }
 
 .Skill-icon {
-  width: 15vmin;
   max-width: 100px;
   aspect-ratio: 1;
   text-overflow: clip;
   overflow: hidden;
-  outline: solid 1px black;
-}
-
-.Skill-icon img {
-  width: 15vmin;
-  max-width: 100px;
-  aspect-ratio: 1;
 }
 
 .Skill-details {

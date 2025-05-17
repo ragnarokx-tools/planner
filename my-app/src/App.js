@@ -3,6 +3,7 @@ import './App.css';
 import jobData from './resources/jobs.json'
 import skillData from './resources/skills.json'
 import Job from './job/Job.js';
+import skillSprites from './icons/all_skills_global.png'
 
 function App() {
   const [jobId, setJob] = useState(1);
@@ -21,8 +22,6 @@ function App() {
     })
     return sheetById;
   }
-
-  const spriteSheetsById = importAll(require.context('./icons/', false, /\.(png)$/));
 
   const onChangeJobHandler = (event) => {
     const jobId = parseInt(event.target.value);
@@ -114,7 +113,7 @@ function App() {
           data={getJobDataById()}
           skillLevels={skillLevels}
           setSkills={setSkills}
-          spriteSheet={spriteSheetsById[jobId]}
+          spriteSheet={skillSprites}
         /> : null }
       </div>
     </div>

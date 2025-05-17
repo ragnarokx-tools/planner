@@ -3,7 +3,7 @@ import "./job.css"
 
 function Job({data: jobData, skillLevels, setSkills, spriteSheet}) {
 
-  const {id: jobId, name, skillTree, skills} = jobData
+  const {name, skillTree, skills} = jobData
 
   const modifySpecificSkill = (skillObject) => 
     (value) => setSkills(prevSkills => {
@@ -14,20 +14,26 @@ function Job({data: jobData, skillLevels, setSkills, spriteSheet}) {
       }
     })
 
-  const calculatePositionInSpriteSheet = (skillId, jobId) => {
+  const iconSize = 100
+  const renderSprite = (skillId, skillObject) => {
     // all sprite sheets are constructed using the following:
-    // 5 columns
-    // 100px image size
-    const entryNumber = skillId - jobId*1000
-    const offsetX = entryNumber % 5
-    const offsetY = Math.floor(entryNumber / 5)
-    const style = {
-      backgroundImage: `url(${spriteSheet})`,
-      backgroundPosition: `-${offsetX*100}px -${offsetY*100}px`,
-      width: `100px`,
-      height: `100px`,
-    };
-    return style
+    // 29 columns
+    // 100px fixed width
+    // pre-determined sprite Index (i will be sad later)
+    if (skillObject && skillObject.spriteIndex >= 0) {
+      const spriteIndex = skillObject.spriteIndex
+      const offsetX = spriteIndex % 20
+      const offsetY = Math.floor(spriteIndex / 20)
+      let style = {
+        backgroundImage: `url(${spriteSheet})`,
+        backgroundPosition: `-${offsetX*iconSize}px -${offsetY*iconSize}px`,
+        width: `${iconSize}px`,
+        height: `${iconSize}px`
+      };
+      return style
+    } else {
+      return null
+    }
   }
 
   const renderSkillsInTree = () => {
@@ -41,7 +47,7 @@ function Job({data: jobData, skillLevels, setSkills, spriteSheet}) {
             data={skillObject} 
             skillLevelData={skillLevels}
             updateSkill={modifySpecificSkill(skillObject)}
-            iconStyle={calculatePositionInSpriteSheet(skillId, jobId)}
+            iconStyle={renderSprite(skillId, skillObject)}
           />
         } else if (skillId < 0) {
           if (skillId === -2) {
@@ -63,21 +69,18 @@ function Job({data: jobData, skillLevels, setSkills, spriteSheet}) {
     return <div>no data for {name}</div>
   }
 
-  const jobIcon = () => {
-    return <div className="Job-icon">
-        <span className={`icon-${name}`} role="img" aria-label={`${name}`}></span>
-        {/* <img alt={name} src={`./jobicons/${id}.png`}/> */}
+  const jobTitle = () => {
+    return <div className="Job-title">
+        {name}
       </div>
   }
 
   return (
     <div className="Job">
       <div className="Job-header">
-        {jobIcon()}
+        {jobTitle()}
       </div>
-      <div className="Job-skillTree">
-        {renderSkillsInTree()}
-      </div>
+      {renderSkillsInTree()}
     </div>
   )
 }

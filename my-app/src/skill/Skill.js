@@ -61,9 +61,17 @@ function Skill({ data: skillData, skillLevelData, updateSkill, iconStyle }) {
   }
 
   const skillIcon = () => {
+    let newStyle = {
+      ...iconStyle 
+    }
+    let filter = "grayscale(100%)"
+    if (canIncrease()) {
+      filter = ""
+    }
+    newStyle["filter"] = filter
     return <div 
       className="Skill-icon"
-      style={iconStyle}
+      style={newStyle}
     ></div>
   }
 
