@@ -1,21 +1,34 @@
-import "../skill/Skill.js"
 import Skill from "../skill/Skill.js"
 import "./job.css"
 
+function Job({data: jobData, skillLevels, setSkills, spriteSheet}) {
 
-
-function Job({data: jobData, skillLevels, setSkills}) {
-
-  const {id, name, skillTree, skills} = jobData
+  const {id: jobId, name, skillTree, skills} = jobData
 
   const modifySpecificSkill = (skillObject) => 
     (value) => setSkills(prevSkills => {
-      const {id, max} = skillObject
+      const {id: skillId, max} = skillObject
       return {
         ...prevSkills,
-        [id]: Math.max(Math.min(max, value),0),
+        [skillId]: Math.max(Math.min(max, value),0),
       }
     })
+
+  const calculatePositionInSpriteSheet = (skillId, jobId) => {
+    // all sprite sheets are constructed using the following:
+    // 5 columns
+    // 100px image size
+    const entryNumber = skillId - jobId*1000
+    const offsetX = entryNumber % 5
+    const offsetY = Math.floor(entryNumber / 5)
+    const style = {
+      backgroundImage: `url(${spriteSheet})`,
+      backgroundPosition: `-${offsetX*100}px -${offsetY*100}px`,
+      width: `100px`,
+      height: `100px`,
+    };
+    return style
+  }
 
   const renderSkillsInTree = () => {
     if (!skills || !skillTree) {
@@ -24,10 +37,11 @@ function Job({data: jobData, skillLevels, setSkills}) {
       const skillTreeItems = skillTree.map(skillId => {
         if (skillId > 0) {
           const skillObject = skills.find(obj => obj.id === skillId)
-          return <Skill 
+          return <Skill
             data={skillObject} 
             skillLevelData={skillLevels}
             updateSkill={modifySpecificSkill(skillObject)}
+            iconStyle={calculatePositionInSpriteSheet(skillId, jobId)}
           />
         } else if (skillId < 0) {
           if (skillId === -2) {
@@ -51,7 +65,7 @@ function Job({data: jobData, skillLevels, setSkills}) {
 
   const jobIcon = () => {
     return <div className="Job-icon">
-        <span class={`icon-${name}`} role="img" aria-label={`${name}`}></span>
+        <span className={`icon-${name}`} role="img" aria-label={`${name}`}></span>
         {/* <img alt={name} src={`./jobicons/${id}.png`}/> */}
       </div>
   }

@@ -1,6 +1,6 @@
 import './Skill.css';
 
-function Skill({ data: skillData, skillLevelData, updateSkill }) {
+function Skill({ data: skillData, skillLevelData, updateSkill, iconStyle }) {
 
   if (!skillData) {
     return <div>no data found for skill</div>
@@ -60,12 +60,11 @@ function Skill({ data: skillData, skillLevelData, updateSkill }) {
     decrementButton = <button disabled={true}>-</button>
   }
 
-  // not working
   const skillIcon = () => {
-    return <div className="Skill-icon">
-        <span class={`icon-${skillName}`} role="img" aria-label={`${skillName}`}></span>
-        {/* <icon alt={skillName} src={`./skillicons/${id}.png`}/> */}
-      </div>
+    return <div 
+      className="Skill-icon"
+      style={iconStyle}
+    ></div>
   }
 
   return (

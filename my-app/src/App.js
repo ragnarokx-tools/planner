@@ -5,20 +5,36 @@ import skillData from './resources/skills.json'
 import Job from './job/Job.js';
 
 function App() {
-  const [job, setJob] = useState("Knight");
+  const [jobId, setJob] = useState(1);
   const [skillLevels, setSkills] = useState({});
 
+  const jobList = jobData.jobs
+
+  function importAll(r) {
+    let sheetById = {}
+    r.keys().forEach( key => {
+      const numberMatch = key.match(/\d+/)
+      const imgId = numberMatch ? numberMatch[0] : null;
+      if (imgId) {
+        sheetById[imgId] = r(key)
+      }
+    })
+    return sheetById;
+  }
+
+  const spriteSheetsById = importAll(require.context('./icons/', false, /\.(png)$/));
+
   const onChangeJobHandler = (event) => {
-    const jobName = event.target.value;
+    const jobId = parseInt(event.target.value);
     if (Object.keys(skillLevels).length !== 0) {
         if (window.confirm("Changing job will reset all skills. Continue?")) {
           setSkills({})
-          setJob(jobName)
+          setJob(jobId)
           window.scrollTo({ top: 0, left: 0})
         }
       } else {
         setSkills({})
-        setJob(jobName)
+        setJob(jobId)
         window.scrollTo({ top: 0, left: 0})
       }
   }
@@ -32,8 +48,8 @@ function App() {
   }
 
   // join the job skillTree with the skill data
-  const getJobDataByName = (jobName) => {
-    const jobObject = jobData.jobs.find((job) => jobName === job.name)
+  const getJobDataById = () => {
+    const jobObject = jobList.find(job => job.id === jobId)
     const skillTree = jobObject.skillTree
     if (skillTree) {
       const skills = skillData.filter((skill) => skillTree.some((skillId) => skillId === skill.id))
@@ -71,8 +87,8 @@ function App() {
 
   const jobSelector = () => {
     return (
-    <select name="job" value={job} defaultValue="Knight" onChange={onChangeJobHandler}>
-      {jobData.jobs.map((job) => <option value={`${job.name}`}>{job.name}</option>)}
+    <select name="job" value={jobId} onChange={onChangeJobHandler}>
+      {jobList.map((job) => <option key={job.id} value={job.id}>{job.name}</option>)}
     </select>
     )
   }
@@ -91,14 +107,14 @@ function App() {
 
   return (
     <div className="App">
-      {/* {renderJobs (allJobsAndSkillsData)} */}
       {header()}
       <div className="App-jobContent">
-      { job ?  
+      { jobId ?  
         <Job 
-          data={getJobDataByName(job)}
+          data={getJobDataById()}
           skillLevels={skillLevels}
-          setSkills={setSkills} 
+          setSkills={setSkills}
+          spriteSheet={spriteSheetsById[jobId]}
         /> : null }
       </div>
     </div>

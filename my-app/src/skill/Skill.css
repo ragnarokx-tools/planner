@@ -32,8 +32,12 @@
 
 .Skill-name {
   font-size: calc(min(8px + 2vmin, 16px));
+  margin: auto;
   margin-top: 1vmin;
   margin-bottom: 1vmin;
+  text-align: center;
+  width: 15vmin;
+  max-width: 100px;
   flex:2;
 }
 
