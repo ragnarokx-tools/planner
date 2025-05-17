@@ -15,6 +15,12 @@
   outline: solid 1px black;
 }
 
+.Skill-icon img {
+  width: 15vmin;
+  max-width: 100px;
+  aspect-ratio: 1;
+}
+
 .Skill-details {
   display: flex;
   flex-direction:column;
@@ -34,8 +40,8 @@
 .Skill-value {
   font-size: calc(min(8px + 2vmin, 16px));
   text-align: center;
-  padding-left: 2vmin;
-  padding-right: 2vmin;
+  padding-left: calc(min(2vmin, 8px));
+  padding-right: calc(min(2vmin, 8px));
 }
 
 .Skill-modifiers {
@@ -48,6 +54,6 @@
 .Skill-modifiers button {
   font-size: calc(8px + 2vmin);
   font-weight: bold;
-  width: calc(8px + 4vmin);
-  height: calc(8px + 4vmin);
+  width: calc(min(8px + 4vmin, 32px));
+  aspect-ratio: 1;
 }

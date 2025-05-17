@@ -25,3 +25,22 @@
   margin-right: 5%;
   margin-bottom: 5%;
 }
+
+.Job-header {
+  margin-bottom: 4vmin;
+}
+
+.Job-icon {
+  width: 15vmin;
+  max-width: 100px;
+  aspect-ratio: 1;
+}
+
+.Job-name {
+  font-size: calc(min(10px + 2vmin, 18px));
+  font-weight: bold;
+}
+
+.Job-totalPoints {
+  font-size: calc(min(10px + 2vmin, 18px));
+}

@@ -1,273 +1,3205 @@
-{
-    "jobs": 
-    [{
-        "id": 1,
-        "name": "Knight",
-        "layout":
-            [1000, 1002, 1003,
-            -2, 0, -2, 
-            1001, 1006, 1004, 
-            0, 0, -2, 
-            1005, 1007, -2,
-            -1, -3, -3,
-            1008, 1009, 1010,
-            -2, -2, 0,
-            1011, 1012, 1013,
-            -2, 0, 0,
-            1014, 1015, 1016,
-            -2 , -2, 0,
-            1017, 1018, 1019,
-            -2, -2, 0,
-            -2, -2, 1020,
-            -3, -3, -3,
-            1021, 1022, 1023,
-            0, 0, 0,
-            1024, 1025, 1026,
-            0, -2, 0,
-            1027, 1028, 1029,
-            0, 0, 0,
-            1030
-        ],
-        "skills": [
-            {
-                "id": 1000,
-                "name": "Bash",
-                "max": 10,
-                "nextId": 1001,
-                "nextLevel": 5
-            },
-            {
-                "id": 1001,
-                "name": "Fatal Blow",
-                "max": 5,
-                "prevId": 1000,
-                "prevLevel": 5
-            },
-            {
-                "id": 1002,
-                "name": "Increase HP Recovery",
-                "max": 10
-            },
-            {
-                "id": 1003,
-                "name": "Provoke",
-                "max": 10,
-                "nextId": 1004,
-                "nextLevel": 5
-            },
-            {
-                "id": 1004,
-                "name": "Endure",
-                "max": 10,
-                "prevId": 1003,
-                "prevLevel": 5,
-                "nextId": 1010,
-                "nextLevel": 3
-            },
-            {
-                "id": 1005,
-                "name": "Magnum Break",
-                "max": 10
-            },
-            {
-                "id": 1006,
-                "name": "Battle Will",
-                "max": 10
-            },
-            {
-                "id": 1007,
-                "name": "Sword Mastery",
-                "max": 10,
-                "nextId": 1009,
-                "nextLevel": 5
-            },
-            {
-                "id": 1008,
-                "name": "Spear Mastery",
-                "max": 10
-            },
-            {
-                "id": 1009,
-                "name": "Sword Speed Boost",
-                "max": 10,
-                "prevId": 1007,
-                "prevLevel": 5,
-                "nextId": 1012,
-                "nextLevel": 5
-            },
-            {
-                "id": 1010,
-                "name": "Steel Heart",
-                "max": 10,
-                "prevId": 1004,
-                "prevLevel": 3
-            },
-            {
-                "id": 1011,
-                "name": "Pierce",
-                "max": 10,
-                "prevId": 1008,
-                "prevLevel": 5,
-                "nextId": 1014,
-                "nextLevel": 5
-            },
-            {
-                "id": 1012,
-                "name": "Double Blow",
-                "max": 10,
-                "prevId": 1009,
-                "prevLevel": 5
-            },
-            {
-                "id": 1013,
-                "name": "Auto Counter",
-                "max": 10
-            },
-            {
-                "id": 1014,
-                "name": "Spear Stab",
-                "max": 10,
-                "prevId": 1011,
-                "prevLevel": 5,
-                "nextId": 1017,
-                "nextLevel": 5
-            },
-            {
-                "id": 1015,
-                "name": "Cavalry Combat",
-                "max": 5,
-                "nextId": 1009,
-                "nextLevel": 5
-            },
-            {
-                "id": 1016,
-                "name": "Bowling Bash",
-                "max": 10
-            },
-            {
-                "id": 1017,
-                "name": "Spear Boomerang",
-                "max": 10,
-                "prevId": 1014,
-                "prevLevel": 5
-            },
-            {
-                "id": 1018,
-                "name": "Cavalry Mastery",
-                "max": 10,
-                "nextId": 1022,
-                "nextLevel": 5,
-                "prevId": 1015,
-                "prevLevel": 5
-            },
-            {
-                "id": 1019,
-                "name": "Charge Attack",
-                "max": 10
-            },
-            {
-                "id": 1020,
-                "name": "Aura Blade",
-                "max": 10,
-                "nextId":1023,
-                "nextLevel":5
-            },
-            {
-                "id": 1021,
-                "name": "Spiral Pierce",
-                "max": 10,
-                "prevId": 1017,
-                "prevLevel": 5
-            },
-            {
-                "id": 1022,
-                "name": "Brandish Spear",
-                "max": 10,
-                "prevId": 1018,
-                "prevLevel": 5
-            },
-            {
-                "id": 1023,
-                "name": "Head Crush",
-                "max": 10,
-                "prevId": 1020,
-                "prevLevel": 5
-            },
-            {
-                "id": 1024,
-                "name": "Lord's Aura",
-                "max": 10
-            },
-            {
-                "id": 1025,
-                "name": "Call of Justice",
-                "max": 10,
-                "nextId":1028,
-                "nextLevel":5
-            },
-            {
-                "id": 1026,
-                "name": "Weapon Blocking",
-                "max": 10
-            },
-            {
-                "id": 1027,
-                "name": "Joint Beat",
-                "max": 10
-            },
-            {
-                "id": 1028,
-                "name": "Self-Ignite",
-                "max": 10,
-                "prevId":1025,
-                "prevLevel":5
-            },
-            {
-                "id": 1029,
-                "name": "Concentration",
-                "max": 10
-            },
-            {
-                "id": 1030,
-                "name": "Berserk",
-                "max": 10
-            }
-        ]
-    },{
-      "id": 2,
-      "name": "Crusader"
-    },{
-      "id": 3,
-      "name": "Wizard"
-    },{
-      "id": 4,
-      "name": "Sage"
-    },{
-      "id": 5,
-      "name": "Blacksmith"
-    },{
-      "id": 6,
-      "name": "Alchemist"
-    },{
-      "id": 7,
-      "name": "Assassin"
-    },{
-      "id": 8,
-      "name": "Rogue"
-    },{
-      "id": 12,
-      "name": "Priest"
-    },{
-      "id": 13,
-      "name": "Monk"
-    },{
-      "id": 9,
-      "name": "Hunter"
-    },{
-      "id": 10,
-      "name": "Bard"
-    },{
-      "id": 11,
-      "name": "Dancer"
-    }]
-}
+[
+  {
+    "id": 1000,
+    "name": "Bash",
+    "max": 10,
+    "nextId": 1001,
+    "nextLevel": 5,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 1001,
+    "name": "Fatal Blow",
+    "max": 5,
+    "nextId": 1000,
+    "nextLevel": 5,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 1002,
+    "name": "Increase HP Recovery",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 1003,
+    "name": "Provoke",
+    "max": 10,
+    "nextId": 1004,
+    "nextLevel": 5,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 1004,
+    "name": "Endure",
+    "max": 10,
+    "nextId": 1010,
+    "nextLevel": 3,
+    "prevId": 1003,
+    "prevLevel": 5
+  },
+  {
+    "id": 1005,
+    "name": "Magnum Break",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 1006,
+    "name": "Battle Will",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 1007,
+    "name": "Sword Mastery",
+    "max": 10,
+    "nextId": 1009,
+    "nextLevel": 5,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 1008,
+    "name": "Spear Mastery",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 1009,
+    "name": "Sword Speed Boost",
+    "max": 10,
+    "nextId": 1012,
+    "nextLevel": 5,
+    "prevId": 1007,
+    "prevLevel": 5
+  },
+  {
+    "id": 1010,
+    "name": "Steel Heart",
+    "max": 10,
+    "nextId": 1004,
+    "nextLevel": 3,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 1011,
+    "name": "Pierce",
+    "max": 10,
+    "nextId": 1014,
+    "nextLevel": 5,
+    "prevId": 1008,
+    "prevLevel": 5
+  },
+  {
+    "id": 1012,
+    "name": "Double Blow",
+    "max": 10,
+    "nextId": 1009,
+    "nextLevel": 5,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 1013,
+    "name": "Auto Counter",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 1014,
+    "name": "Spear Stab",
+    "max": 10,
+    "nextId": 1017,
+    "nextLevel": 5,
+    "prevId": 1011,
+    "prevLevel": 5
+  },
+  {
+    "id": 1015,
+    "name": "Cavalry Combat",
+    "max": 5,
+    "nextId": 1009,
+    "nextLevel": 5,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 1016,
+    "name": "Bowling Bash",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 1017,
+    "name": "Spear Boomerang",
+    "max": 10,
+    "nextId": 1014,
+    "nextLevel": 5,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 1018,
+    "name": "Cavalry Mastery",
+    "max": 10,
+    "nextId": 1022,
+    "nextLevel": 5,
+    "prevId": 1015,
+    "prevLevel": 5
+  },
+  {
+    "id": 1019,
+    "name": "Charge Attack",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 1020,
+    "name": "Aura Blade",
+    "max": 10,
+    "nextId": 1023,
+    "nextLevel": 5,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 1021,
+    "name": "Spiral Pierce",
+    "max": 10,
+    "nextId": 1017,
+    "nextLevel": 5,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 1022,
+    "name": "Brandish Spear",
+    "max": 10,
+    "nextId": 1018,
+    "nextLevel": 5,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 1023,
+    "name": "Head Crush",
+    "max": 10,
+    "nextId": 1020,
+    "nextLevel": 5,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 1024,
+    "name": "Lord's Aura",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 1025,
+    "name": "Call of Justice",
+    "max": 10,
+    "nextId": 1028,
+    "nextLevel": 5,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 1026,
+    "name": "Weapon Blocking",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 1027,
+    "name": "Joint Beat",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 1028,
+    "name": "Self-Ignite",
+    "max": 10,
+    "nextId": 1025,
+    "nextLevel": 5,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 1029,
+    "name": "Concentration",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 1030,
+    "name": "Berserk",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 2000,
+    "name": "Cavalry Mastery",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null,
+    "Notes": "All skills below here need name and prereq verification"
+  },
+  {
+    "id": 2001,
+    "name": "Holy Cure",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 2002,
+    "name": "Face",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 2003,
+    "name": "Acceleration",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 2004,
+    "name": "Auto Guard",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 2005,
+    "name": "Spear Training",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 2006,
+    "name": "Sacrifice",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 2007,
+    "name": "Shield Charge",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 2008,
+    "name": "Holy Cross",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 2009,
+    "name": "Tornado Slash",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 2010,
+    "name": "Shield Boomerang",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 2011,
+    "name": "Grand Cross",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 2012,
+    "name": "Gospel",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 2013,
+    "name": "Prestige",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 2014,
+    "name": "Divine Punishment",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 2015,
+    "name": "Elevation",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 2016,
+    "name": "Reflect Shield",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 2017,
+    "name": "Pressure",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 2018,
+    "name": "Exceed Break",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 2019,
+    "name": "Defender",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 2020,
+    "name": "Pinpoint Attack",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 2021,
+    "name": "Fearless Charge",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 2022,
+    "name": "Earth Drive",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 2023,
+    "name": "Moon Slash",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 3000,
+    "name": "Power Hit",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 3001,
+    "name": "Inreased Evasion",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 3002,
+    "name": "Detoxify",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 3003,
+    "name": "Double Attack",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 3004,
+    "name": "Hiding",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 3005,
+    "name": "Enchant Poison",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 3006,
+    "name": "Ambush",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 3007,
+    "name": "Venom Knife",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 3008,
+    "name": "Armor Break",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 3009,
+    "name": "Enhanced Hiding",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 3010,
+    "name": "Enhchant Poison",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 3011,
+    "name": "Sonic Blow",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 3012,
+    "name": "Grimtooth",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 3013,
+    "name": "Invernham",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 3014,
+    "name": "Sonic Blow Enhancement",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 3015,
+    "name": "Shadow Blade",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 3016,
+    "name": "Right Hand Training",
+    "max": 5,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 3017,
+    "name": "Roling Evasion",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 3018,
+    "name": "Katar Training",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 3019,
+    "name": "Left Hand Training",
+    "max": 5,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 3020,
+    "name": "Assassinate",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 3021,
+    "name": "Katar Studies",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 3022,
+    "name": "Enchant Deadly Poison",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 3023,
+    "name": "Slash",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 3024,
+    "name": "Meteor Assault",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 3025,
+    "name": "Venom Dust",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 3026,
+    "name": "Soul Breaker",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 3027,
+    "name": "Phantom Blow",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 3028,
+    "name": "Venom Splasher",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 3029,
+    "name": "Compulsive Discount",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 4000,
+    "name": "Backstab",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 4001,
+    "name": "Poison Attack",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 4002,
+    "name": "Evoque",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 4003,
+    "name": "Dagger Training",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 4004,
+    "name": "Poison Shot",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 4005,
+    "name": "Assault",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 4006,
+    "name": "Surprise Attack",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 4007,
+    "name": "Double Strafe",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 4008,
+    "name": "Eagle Eye",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 4009,
+    "name": "Close Confine",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 4010,
+    "name": "Chain Shot",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 4011,
+    "name": "Clone Skill",
+    "max": 5,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 4012,
+    "name": "Intimidate",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 4013,
+    "name": "Triangle Shot",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 4014,
+    "name": "Steal",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 4015,
+    "name": "Shadow Pierce",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 4016,
+    "name": "Manhole",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 4017,
+    "name": "Gangster Paradise",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 4018,
+    "name": "Strip Armor",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 4019,
+    "name": "Pollution Arrow",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 4020,
+    "name": "Reject Sword",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 4021,
+    "name": "Strip Accessory",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 4022,
+    "name": "Death Arrow",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 5000,
+    "name": "Double Strafe",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 5001,
+    "name": "Charge Arrow",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 5002,
+    "name": "Ankle Snare",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 5003,
+    "name": "Arrow Shower",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 5004,
+    "name": "Owl Eyes",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 5005,
+    "name": "Freeze Trap",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 5006,
+    "name": "Elemental Arrow",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 5007,
+    "name": "Eagle Eye",
+    "max": 5,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 5008,
+    "name": "Improved Concentration",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 5009,
+    "name": "Falcon Mastery",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 5010,
+    "name": "Claymore Trap",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 5011,
+    "name": "Beast Bane",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 5012,
+    "name": "Blitz Beat",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 5013,
+    "name": "Blast Mine",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 5014,
+    "name": "Focused Shot",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 5015,
+    "name": "Steel Claw",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 5016,
+    "name": "Spring Trap",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 5017,
+    "name": "Wind Walk",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 5018,
+    "name": "Falcon Assault",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 5019,
+    "name": "Detect",
+    "max": 5,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 5020,
+    "name": "True Sight",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 5021,
+    "name": "Flyton?",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 5022,
+    "name": "Sandman",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 5023,
+    "name": "Multishot",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 5024,
+    "name": "Beast Tamer",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 5025,
+    "name": "Land Mine",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 5026,
+    "name": "Sharpshooting",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 5027,
+    "name": "Wild Release",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 5028,
+    "name": "Trap Research",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 6000,
+    "name": "Instrument Practice",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null,
+    "Notes": "bard"
+  },
+  {
+    "id": 6001,
+    "name": "Dissonance",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 6002,
+    "name": "Ensemble Invitation",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 6003,
+    "name": "Musical Strike",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 6004,
+    "name": "Assassin's Cross of the Sunset",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 6005,
+    "name": "The Sound of War Drums",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 6006,
+    "name": "Sound Beat",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 6007,
+    "name": "Idun's Apple",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 6008,
+    "name": "Njord's Feast",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 6009,
+    "name": "Bad Joke",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 6010,
+    "name": "Encore",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 6011,
+    "name": "Ad-lib",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 6012,
+    "name": "Arrow Vulcan",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 6013,
+    "name": "Bragi's Poem",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 6014,
+    "name": "Panvoice",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 6015,
+    "name": "Severe Rainstorm",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 6016,
+    "name": "Whistling",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 6017,
+    "name": "Eternal Chaos",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 6018,
+    "name": "Lesson",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 6019,
+    "name": "Don't Tie Me Down",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 6020,
+    "name": "Immortal Siegfried",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 6021,
+    "name": "Excite Note",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 6022,
+    "name": "Great Echo",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 6023,
+    "name": "The Mists of Lera",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 7000,
+    "name": "Dance Practice",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null,
+    "Notes": "dancer"
+  },
+  {
+    "id": 7001,
+    "name": "Selfish Dance",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null,
+    "Notes": "figure out what to do with duplicates"
+  },
+  {
+    "id": 7002,
+    "name": "Ensemble Invitation",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 7003,
+    "name": "Arrow Shooting",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 7004,
+    "name": "Humming",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 7005,
+    "name": "The Sound of War Drums",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 7006,
+    "name": "Sound Beat",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 7007,
+    "name": "Moonlight Serenade",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 7008,
+    "name": "Njord's Feast",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 7009,
+    "name": "Scream",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 7010,
+    "name": "Encore",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 7011,
+    "name": "Ad-lib",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 7012,
+    "name": "Arrow Vulcan",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 7013,
+    "name": "Lucky Kiss",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 7014,
+    "name": "A Captivating Wink",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 7015,
+    "name": "Severe Rainstorm",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 7016,
+    "name": "Don't Forget Me",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 7017,
+    "name": "Eternal Chaos",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 7018,
+    "name": "Lesson",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 7019,
+    "name": "Don't Tie Me Down",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 7020,
+    "name": "Immortal Siegfried",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 7021,
+    "name": "Excite Note",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 7022,
+    "name": "Great Echo",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 7023,
+    "name": "The Mists of Lera",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 8000,
+    "name": "Magic Crusher",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null,
+    "Notes": "wizard"
+  },
+  {
+    "id": 8001,
+    "name": "Firebolt",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 8002,
+    "name": "Soul Strike",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 8003,
+    "name": "Lightning Bolt",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 8004,
+    "name": "Fireball",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 8005,
+    "name": "Earth Spike",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 8006,
+    "name": "Cold Bolt",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 8007,
+    "name": "Fire Wall",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 8008,
+    "name": "Improved SP Recovery",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 8009,
+    "name": "Frost Diver",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 8010,
+    "name": "Storm Gust",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 8011,
+    "name": "Energy Coat",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 8012,
+    "name": "Soul Drain",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 8013,
+    "name": "Frost Nova",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 8014,
+    "name": "Fire Pillar",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 8015,
+    "name": "Jupitel Thunder",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 8016,
+    "name": "Sight",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 8017,
+    "name": "Ignition",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 8018,
+    "name": "Lord of Vermillion",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 8019,
+    "name": "Napalm Beat",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 8020,
+    "name": "Napalm Vulcan",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 8021,
+    "name": "Meteor Storm",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 8022,
+    "name": "Chain Lightning",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 8023,
+    "name": "Intense Telekinesis",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 8024,
+    "name": "Quagmire",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 8025,
+    "name": "Overcurrent",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 8026,
+    "name": "Safety Wall",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 8027,
+    "name": "Gravity Field",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 8028,
+    "name": "Heaven's Drive",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 9000,
+    "name": "Advanced Book",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 9001,
+    "name": "Free Cast",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 9002,
+    "name": "Cast Inertia",
+    "max": 5,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 9003,
+    "name": "Auto Spell",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 9004,
+    "name": "Magic Rod",
+    "max": 5,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 9005,
+    "name": "Radius",
+    "max": 5,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 9006,
+    "name": "Elemental Marker",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 9007,
+    "name": "Spell Breaker",
+    "max": 5,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 9008,
+    "name": "Bolt Enhancement",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 9009,
+    "name": "Elemental Marker Enhancement",
+    "max": 5,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 9010,
+    "name": "Dispel",
+    "max": 5,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 9011,
+    "name": "Elemental Field",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 9012,
+    "name": "Spider Web",
+    "max": 5,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 9013,
+    "name": "Convert Life",
+    "max": 5,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 9014,
+    "name": "Memorize",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 9015,
+    "name": "Spell Fist",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 9016,
+    "name": "Soul Change",
+    "max": 5,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 9017,
+    "name": "Double Cast",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 9018,
+    "name": "Striking",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 9019,
+    "name": "Mind Drain",
+    "max": 5,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 9020,
+    "name": "Monster Knowledge",
+    "max": 5,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 9021,
+    "name": "Element Knowledge",
+    "max": 5,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 9022,
+    "name": "Mind Breaker",
+    "max": 5,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 9023,
+    "name": "Area Extend",
+    "max": 5,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 10000,
+    "name": "Heal",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null,
+    "Notes": "priest"
+  },
+  {
+    "id": 10001,
+    "name": "Blessing",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 10002,
+    "name": "Mace Training",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 10003,
+    "name": "Healing Light",
+    "max": 5,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 10004,
+    "name": "Increase AGI",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 10005,
+    "name": "Signum Crucic",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 10006,
+    "name": "Light's Blessing",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 10007,
+    "name": "Holy Light",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 10008,
+    "name": "Kyrie Eleison",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 10009,
+    "name": "Improved SP Recovery",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 10010,
+    "name": "Divine Amplification",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 10011,
+    "name": "Imposito Manus",
+    "max": 5,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 10012,
+    "name": "Sanctuary",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 10013,
+    "name": "Resurrection",
+    "max": 5,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 10014,
+    "name": "Gloria",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 10015,
+    "name": "Ruwach",
+    "max": 5,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 10016,
+    "name": "Angelus",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 10017,
+    "name": "Magnificat",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 10018,
+    "name": "Pneuma",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 10019,
+    "name": "Assumptio",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 10020,
+    "name": "Aspersio",
+    "max": 5,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 10021,
+    "name": "Expatio",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 10022,
+    "name": "Divine Protection",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 10023,
+    "name": "Turn Undead",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 10024,
+    "name": "Medidatio",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 10025,
+    "name": "Holy Strike",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 10026,
+    "name": "Magnus Exorcismus",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 10027,
+    "name": "Reduce AGI",
+    "max": 5,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 10028,
+    "name": "Judex",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 10029,
+    "name": "Lex Aeterna",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 10030,
+    "name": "Coluceo Heal",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 10031,
+    "name": "Sacred Hammer",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 10032,
+    "name": "Safety Wall",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 10033,
+    "name": "Sacred Blessing",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 10034,
+    "name": "Damnation",
+    "max": 5,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 10035,
+    "name": "Lex Divina",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 10036,
+    "name": "Suffragium",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 11000,
+    "name": "Shippuken",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null,
+    "Notes": "monk"
+  },
+  {
+    "id": 11001,
+    "name": "Iron Fist",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null,
+    "Notes": "all the names i dont know"
+  },
+  {
+    "id": 11002,
+    "name": "Ki Fist",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 11003,
+    "name": "Triple Strike",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 11004,
+    "name": "Ki",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 11005,
+    "name": "Release Internal Power",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 11006,
+    "name": "Quadruple Strike",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 11007,
+    "name": "Ki Training",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 11008,
+    "name": "Ki Wave",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 11009,
+    "name": "Fierce Dragon Fist",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 11010,
+    "name": "Explosion Wave",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 11011,
+    "name": "Throw Spirit Sphere",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 11012,
+    "name": "Dimensions?",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 11013,
+    "name": "Folded Tiger Fist?",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 11014,
+    "name": "Breath?",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 11015,
+    "name": "Sky Slash Wave?",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 11016,
+    "name": "Collapse Attack?",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 11017,
+    "name": "Fierce Tiger Palm",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 11018,
+    "name": "Inhalation Exercise",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 11019,
+    "name": "Flash Combo",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 11020,
+    "name": "Remaining Shadow",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 11021,
+    "name": "Explosive Shot",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 11022,
+    "name": "Asura Strike",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 11023,
+    "name": "Point Hole Ball...",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 11024,
+    "name": "Ki Infusion",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 12000,
+    "name": "Bounty Hunter",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 12001,
+    "name": "Push Cart",
+    "max": 5,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 12002,
+    "name": "Open Stall",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 12003,
+    "name": "Mammonite",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 12004,
+    "name": "Cart Revolution",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 12005,
+    "name": "Fighting Will",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 12006,
+    "name": "Discount",
+    "max": 5,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 12007,
+    "name": "Weight Increase",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 12008,
+    "name": "Crazy Uproar",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 12009,
+    "name": "Overcharge",
+    "max": 5,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 12010,
+    "name": "Weapon Improvement",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 12011,
+    "name": "Cart Enhancement",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 12012,
+    "name": "Overthrust",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 12013,
+    "name": "Skin Tempering",
+    "max": 5,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 12014,
+    "name": "Cart Throw",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 12015,
+    "name": "Adrenaline Rush",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 12016,
+    "name": "Hammerfall",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 12017,
+    "name": "Cart Charge",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 12018,
+    "name": "Weapon Perfection",
+    "max": 5,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 12019,
+    "name": "Greed",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 12020,
+    "name": "Wild Swing",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 12021,
+    "name": "Fake Zeny",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 12022,
+    "name": "Cart Rush",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 12023,
+    "name": "Meltdown",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 12024,
+    "name": "Zeny Power",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 12025,
+    "name": "Cart Boost",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 12026,
+    "name": "Wild Cleaver",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 12027,
+    "name": "Zeny Throw",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 12028,
+    "name": "Cart Termination",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 12029,
+    "name": "Overthrust MAX",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 12030,
+    "name": "Zeny Storm",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 13000,
+    "name": "Impact Slash",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 13001,
+    "name": "Axe and Mace Training",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 13002,
+    "name": "Bio Plant",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 13003,
+    "name": "Physical Strengthening",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 13004,
+    "name": "Call Homunculus",
+    "max": 4,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 13005,
+    "name": "Sphere Mine",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 13006,
+    "name": "Demonstration",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 13007,
+    "name": "Repose",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 13008,
+    "name": "Pharmacy",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 13009,
+    "name": "Acid Terror",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 13010,
+    "name": "Resurrect Homunculus",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 13011,
+    "name": "Learning Potion?",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 13012,
+    "name": "Acid Demonstration",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 13013,
+    "name": "Cart Enhancement",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 13014,
+    "name": "Slim Potion Pitcher",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 13015,
+    "name": "Bloodsucker",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 13016,
+    "name": "Cart Tornado",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 13017,
+    "name": "Hell Plant",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 13018,
+    "name": "Hallucinogenic Drug",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 13019,
+    "name": "Spore Explosion",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 13020,
+    "name": "Chemical Protect Armor",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 13021,
+    "name": "Demonic Fire",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 13022,
+    "name": "Homunculus Enhancement",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  },
+  {
+    "id": 13023,
+    "name": "Chemical Protect Accessories",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null,
+    "prevLevel": null
+  }
+]
