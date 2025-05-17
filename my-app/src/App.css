@@ -7,6 +7,33 @@
   touch-action: manipulation;
 }
 
+.App-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 3%;
+  padding-right: 3%;
+  width: min-content;
+  background-color: white;
+  border: black 1px solid;
+  height: 10vh min-content;
+}
+
+.App-jobContent {
+  margin-top: calc(max(4vh, 4vmin));
+}
+
+.App-jobName select {
+  font-size: calc(min(10px + 2vmin, 18px));
+  font-weight: bold;
+}
+
+.App-totalJobPoints {
+  font-size: calc(min(10px + 2vmin, 18px));
+}
+
 .App-jobOption {
   width: 12vmin;
   margin: auto;
@@ -16,11 +43,11 @@
 }
 
 .App-jobList {
-  margin:auto;
+  margin: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
-
+/* 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -30,9 +57,9 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
-.App-header {
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -41,9 +68,9 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
-.App-link {
+/* .App-link {
   color: #61dafb;
 }
 
@@ -54,4 +81,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

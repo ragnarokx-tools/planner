@@ -1,15 +1,16 @@
 import { useState } from 'react';
 import './App.css';
-import allJobsAndSkillsData from './resources/skills.json'
+import jobData from './resources/jobs.json'
+import skillData from './resources/skills.json'
 import Job from './job/Job.js';
 
 function App() {
   const [job, setJob] = useState("Knight");
   const [skillLevels, setSkills] = useState({});
 
-  const onClickJobHandler = (jobName) => {
-    return (_ => {
-      if (Object.keys(skillLevels).length !== 0) {
+  const onChangeJobHandler = (event) => {
+    const jobName = event.target.value;
+    if (Object.keys(skillLevels).length !== 0) {
         if (window.confirm("Changing job will reset all skills. Continue?")) {
           setSkills({})
           setJob(jobName)
@@ -18,37 +19,86 @@ function App() {
         setSkills({})
         setJob(jobName)
       }
-    })
+  }
+  
+  const handleResetSkills = () => {
+    if (window.confirm("Are you sure you want to reset all skills?")) {
+      // Proceed with submission
+      setSkills({})
+    } else {
+    }  
   }
 
-  const renderJobs = (data) => {
-    if (!data) {
-      return null
+  // join the job skillTree with the skill data
+  const getJobDataByName = (jobName) => {
+    const jobObject = jobData.jobs.find((job) => jobName === job.name)
+    const skillTree = jobObject.skillTree
+    if (skillTree) {
+      const skills = skillData.filter((skill) => skillTree.some((skillId) => skillId === skill.id))
+      return {...jobObject, "skills": skills}
     } else {
-      const listOfJobs = data.jobs.map(jobObject => {
-        return (
-        <div 
-          className="App-jobOption"
-          onClick={onClickJobHandler(jobObject.name)}>
-            {jobObject.name}
-        </div>)
-      })
-      return <div className="App-jobList">{listOfJobs}</div>
+      return jobObject
     }
   }
 
-  const getJobDataByName = (jobName, allJobsAndSkillsDataJobs) => {
-    return allJobsAndSkillsDataJobs.find((job) => jobName === job.name)
+  if (!jobData) {
+    return <div>Loading static data... Try reloading if it doesn't work.</div>
+  }
+  
+
+  const renderResetButton = () => {
+    return <button onClick={handleResetSkills}>reset</button>
   }
 
-  if (!allJobsAndSkillsData) {
-    return <div>Loading static data... Try reloading if it doesn't work.</div>
+  /* 
+    Renders a display of total skill points
+  */
+  const renderTotalSkillPointsUsed = () => {
+    let sum = 0;
+    if(skillLevels) {
+      Object.values(skillLevels).map((level) => 
+        sum += level
+      )
+    }
+    let advisory;
+    if (sum > 170) {
+      advisory = <div className="App-jobWarning">warning: exceeds possible job levels</div>
+    }
+    return <div className="App-totalJobPoints">{sum}/170{advisory}</div>
+  }
+
+  const jobSelector = () => {
+    return (
+    <select name="job" value={job} defaultValue="Knight" onChange={onChangeJobHandler}>
+      {jobData.jobs.map((job) => <option value={`${job.name}`}>{job.name}</option>)}
+    </select>
+    )
+  }
+
+  const header = () => {
+    return (
+      <div className="App-header">
+        <div className="App-jobName">{jobSelector()}</div>
+        {renderTotalSkillPointsUsed()}
+        <div className="App-jobButtons">
+          {renderResetButton()}
+        </div>
+      </div>
+    )
   }
 
   return (
     <div className="App">
-      {renderJobs (allJobsAndSkillsData)}
-      { job ?  <Job data={getJobDataByName(job, allJobsAndSkillsData.jobs)} skillLevels={skillLevels} setSkills={setSkills} /> : null }
+      {/* {renderJobs (allJobsAndSkillsData)} */}
+      {header()}
+      <div className="App-jobContent">
+      { job ?  
+        <Job 
+          data={getJobDataByName(job)}
+          skillLevels={skillLevels}
+          setSkills={setSkills} 
+        /> : null }
+      </div>
     </div>
   );
 }
