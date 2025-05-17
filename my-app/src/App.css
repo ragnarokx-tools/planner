@@ -2,9 +2,9 @@
   text-align: center;
   align-content: top;
   max-width: 688px;
+  margin-left: auto;
+  margin-right: auto;
   height: 100vh;
-  margin: auto;
-  touch-action: manipulation;
 }
 
 .App-header {
@@ -18,7 +18,7 @@
   width: min-content;
   background-color: white;
   border: black 1px solid;
-  height: 10vh min-content;
+  height: min-content;
 }
 
 .App-jobContent {

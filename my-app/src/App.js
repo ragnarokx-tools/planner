@@ -14,10 +14,12 @@ function App() {
         if (window.confirm("Changing job will reset all skills. Continue?")) {
           setSkills({})
           setJob(jobName)
+          window.scrollTo({ top: 0, left: 0})
         }
       } else {
         setSkills({})
         setJob(jobName)
+        window.scrollTo({ top: 0, left: 0})
       }
   }
   
