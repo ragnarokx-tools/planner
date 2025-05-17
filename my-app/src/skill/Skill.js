@@ -62,12 +62,15 @@ function Skill({ data: skillData, skillLevelData, updateSkill }) {
 
   // not working
   const skillIcon = () => {
-    return <img alt={skillName} href={`%PUBLIC_URL%/skillicons/${id}.png`}/>
+    return <div className="Skill-icon">
+        <span class={`icon-${skillName}`} role="img" aria-label={`${skillName}`}></span>
+        {/* <icon alt={skillName} src={`./skillicons/${id}.png`}/> */}
+      </div>
   }
 
   return (
     <div className="Skill">
-        <div className="Skill-icon">{skillIcon()}</div>
+        {skillIcon()}
         <div className="Skill-details">
             <div className="Skill-name">{skillName}</div>
             <div className="Skill-modifiers">

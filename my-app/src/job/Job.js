@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import "../skill/Skill.js"
 import Skill from "../skill/Skill.js"
 import "./job.css"
@@ -7,7 +6,7 @@ import "./job.css"
 
 function Job({data: jobData, skillLevels, setSkills}) {
 
-  const {name} = jobData
+  const {id, name, skillTree, skills} = jobData
 
   const modifySpecificSkill = (skillObject) => 
     (value) => setSkills(prevSkills => {
@@ -18,38 +17,13 @@ function Job({data: jobData, skillLevels, setSkills}) {
       }
     })
 
-  const handleResetSkills = () => {
-    if (window.confirm("Are you sure you want to reset all skills?")) {
-      // Proceed with submission
-      setSkills({})
-    } else {
-    }  
-  }
-
-  const renderResetButton = () => {
-    return <button onClick={handleResetSkills}>reset</button>
-  }
-
-  /* 
-    Renders a display of total skill points
-  */
-  const renderTotalSkillPointsUsed = () => {
-    let sum = 0;
-    if(skillLevels) {
-      Object.values(skillLevels).map((level) => 
-        sum += level
-      )
-    }
-    return <div>{sum}</div>
-  }
-
-  const renderSkills = (layout, jobData) => {
-    if (!jobData || !layout) {
+  const renderSkillsInTree = () => {
+    if (!skills || !skillTree) {
       return <div>couldn't find skills</div>
     } else {
-      const layoutItems = layout.map(skillId => {
+      const skillTreeItems = skillTree.map(skillId => {
         if (skillId > 0) {
-          const skillObject = jobData.find(obj => obj.id === skillId)
+          const skillObject = skills.find(obj => obj.id === skillId)
           return <Skill 
             data={skillObject} 
             skillLevelData={skillLevels}
@@ -67,22 +41,29 @@ function Job({data: jobData, skillLevels, setSkills}) {
           return <div className="Job-spacer"></div>
         }
       })
-      return <div className="Job-skillGrid">{layoutItems}</div>
+      return <div className="Job-skillGrid">{skillTreeItems}</div>
     }
   } 
 
-  if (!jobData) {
+  if (!skills) {
     return <div>no data for {name}</div>
+  }
+
+  const jobIcon = () => {
+    return <div className="Job-icon">
+        <span class={`icon-${name}`} role="img" aria-label={`${name}`}></span>
+        {/* <img alt={name} src={`./jobicons/${id}.png`}/> */}
+      </div>
   }
 
   return (
     <div className="Job">
-      <div>
-        <b>{name}</b> 
-        {renderResetButton()}
+      <div className="Job-header">
+        {jobIcon()}
       </div>
-      {renderTotalSkillPointsUsed()}
-      {renderSkills(jobData.layout, jobData.skills)}
+      <div className="Job-skillTree">
+        {renderSkillsInTree()}
+      </div>
     </div>
   )
 }
