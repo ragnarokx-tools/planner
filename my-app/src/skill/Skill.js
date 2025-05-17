@@ -49,15 +49,15 @@ function Skill({ data: skillData, skillLevelData, updateSkill, iconStyle }) {
   }
 
   if (currentValue < max && canIncrease()) {
-    incrementButton = <button onClick={handleIncrement(1)}>+</button>
+    incrementButton = <span className="Skill-button" rel="button" onClick={handleIncrement(1)}>+</span>
   } else {
-    incrementButton = <button disabled={true}>+</button>
+    incrementButton = <span className="Skill-button Skill-buttonDisabled" rel="button">+</span>
   }
 
   if (currentValue > 0 && canDecrease()) {
-    decrementButton = <button onClick={handleIncrement(-1)}>-</button>
+    decrementButton = <span className="Skill-button" rel="button" onClick={handleIncrement(-1)}>-</span>
   } else {
-    decrementButton = <button disabled={true}>-</button>
+    decrementButton = <span className="Skill-button Skill-buttonDisabled" rel="button">-</span>
   }
 
   const skillIcon = () => {
