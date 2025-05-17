@@ -22,6 +22,11 @@
   z-index: 1;
 }
 
+.App-copiedUrl {
+  overflow: hidden;
+  transition: height 0.5s;
+}
+
 .App-jobContent {
   margin-top: calc(max(4vh, 4vmin));
 }

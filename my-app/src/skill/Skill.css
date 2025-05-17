@@ -35,6 +35,7 @@
 
 .Skill-value {
   font-size: calc(min(8px + 2vmin, 16px));
+  font-weight: bold;
   text-align: center;
   padding-left: calc(min(2vmin, 8px));
   padding-right: calc(min(2vmin, 8px));
@@ -47,9 +48,19 @@
   flex:1;
 }
 
-.Skill-modifiers button {
-  font-size: calc(8px + 2vmin);
+.Skill-modifiers .Skill-button {
+  text-align: center;
+  vertical-align: center;
+  font-size: calc(10px + 2vmin);
   font-weight: bold;
   width: calc(min(8px + 4vmin, 32px));
   aspect-ratio: 1;
+  border: solid 1px black;
+  cursor: pointer;
+  background-color: lightblue;
+}
+
+.Skill-button.Skill-buttonDisabled {
+  background-color: lightgrey;
+  cursor: unset;
 }
