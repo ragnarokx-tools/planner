@@ -17,23 +17,23 @@
   flex: 1;
 }
 
+.Job-skillTree {
+  width: min-content;
+}
+
 .Job .Job-skillGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-bottom: 5%;
+  column-gap: 4vmin;
 }
 
 .Job-header {
   margin-bottom: 4vmin;
 }
 
-.Job-icon {
-  width: 15vmin;
-  max-width: 100px;
-  aspect-ratio: 1;
+.Job-title {
+  font-weight: bold;
+  font-size: calc(min(18px + 2vmin, 36px))
 }
 
 .Job-name {

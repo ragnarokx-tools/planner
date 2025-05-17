@@ -1,21 +1,40 @@
-import "../skill/Skill.js"
 import Skill from "../skill/Skill.js"
 import "./job.css"
 
+function Job({data: jobData, skillLevels, setSkills, spriteSheet}) {
 
-
-function Job({data: jobData, skillLevels, setSkills}) {
-
-  const {id, name, skillTree, skills} = jobData
+  const {name, skillTree, skills} = jobData
 
   const modifySpecificSkill = (skillObject) => 
     (value) => setSkills(prevSkills => {
-      const {id, max} = skillObject
+      const {id: skillId, max} = skillObject
       return {
         ...prevSkills,
-        [id]: Math.max(Math.min(max, value),0),
+        [skillId]: Math.max(Math.min(max, value),0),
       }
     })
+
+  const iconSize = 100
+  const renderSprite = (skillId, skillObject) => {
+    // all sprite sheets are constructed using the following:
+    // 29 columns
+    // 100px fixed width
+    // pre-determined sprite Index (i will be sad later)
+    if (skillObject && skillObject.spriteIndex >= 0) {
+      const spriteIndex = skillObject.spriteIndex
+      const offsetX = spriteIndex % 20
+      const offsetY = Math.floor(spriteIndex / 20)
+      let style = {
+        backgroundImage: `url(${spriteSheet})`,
+        backgroundPosition: `-${offsetX*iconSize}px -${offsetY*iconSize}px`,
+        width: `${iconSize}px`,
+        height: `${iconSize}px`
+      };
+      return style
+    } else {
+      return null
+    }
+  }
 
   const renderSkillsInTree = () => {
     if (!skills || !skillTree) {
@@ -24,10 +43,11 @@ function Job({data: jobData, skillLevels, setSkills}) {
       const skillTreeItems = skillTree.map(skillId => {
         if (skillId > 0) {
           const skillObject = skills.find(obj => obj.id === skillId)
-          return <Skill 
+          return <Skill
             data={skillObject} 
             skillLevelData={skillLevels}
             updateSkill={modifySpecificSkill(skillObject)}
+            iconStyle={renderSprite(skillId, skillObject)}
           />
         } else if (skillId < 0) {
           if (skillId === -2) {
@@ -49,21 +69,18 @@ function Job({data: jobData, skillLevels, setSkills}) {
     return <div>no data for {name}</div>
   }
 
-  const jobIcon = () => {
-    return <div className="Job-icon">
-        <span class={`icon-${name}`} role="img" aria-label={`${name}`}></span>
-        {/* <img alt={name} src={`./jobicons/${id}.png`}/> */}
+  const jobTitle = () => {
+    return <div className="Job-title">
+        {name}
       </div>
   }
 
   return (
     <div className="Job">
       <div className="Job-header">
-        {jobIcon()}
+        {jobTitle()}
       </div>
-      <div className="Job-skillTree">
-        {renderSkillsInTree()}
-      </div>
+      {renderSkillsInTree()}
     </div>
   )
 }
