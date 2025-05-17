@@ -5,17 +5,16 @@
     "max": 10,
     "nextId": 1001,
     "nextLevel": 5,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 1001,
     "name": "Fatal Blow",
     "max": 5,
-    "nextId": 1000,
-    "nextLevel": 5,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": 1000,
+    "prevLevel": 5
   },
   {
     "id": 1002,
@@ -23,8 +22,7 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 1003,
@@ -32,8 +30,7 @@
     "max": 10,
     "nextId": 1004,
     "nextLevel": 5,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 1004,
@@ -50,8 +47,7 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 1006,
@@ -59,8 +55,7 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 1007,
@@ -68,8 +63,7 @@
     "max": 10,
     "nextId": 1009,
     "nextLevel": 5,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 1008,
@@ -77,8 +71,7 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 1009,
@@ -93,10 +86,10 @@
     "id": 1010,
     "name": "Steel Heart",
     "max": 10,
-    "nextId": 1004,
-    "nextLevel": 3,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": 1004,
+    "prevLevel": 3
   },
   {
     "id": 1011,
@@ -104,17 +97,16 @@
     "max": 10,
     "nextId": 1014,
     "nextLevel": 5,
-    "prevId": 1008,
-    "prevLevel": 5
+    "prevId": null
   },
   {
     "id": 1012,
     "name": "Double Blow",
     "max": 10,
-    "nextId": 1009,
-    "nextLevel": 5,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": 1009,
+    "prevLevel": 5
   },
   {
     "id": 1013,
@@ -122,8 +114,7 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 1014,
@@ -138,10 +129,9 @@
     "id": 1015,
     "name": "Cavalry Combat",
     "max": 5,
-    "nextId": 1009,
-    "nextLevel": 5,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 1018,
+    "nextLevel": 1,
+    "prevId": null
   },
   {
     "id": 1016,
@@ -149,17 +139,16 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 1017,
     "name": "Spear Boomerang",
     "max": 10,
-    "nextId": 1014,
+    "nextId": 1021,
     "nextLevel": 5,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 1014,
+    "prevLevel": 5
   },
   {
     "id": 1018,
@@ -168,7 +157,7 @@
     "nextId": 1022,
     "nextLevel": 5,
     "prevId": 1015,
-    "prevLevel": 5
+    "prevLevel": 1
   },
   {
     "id": 1019,
@@ -176,8 +165,7 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 1020,
@@ -185,35 +173,34 @@
     "max": 10,
     "nextId": 1023,
     "nextLevel": 5,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 1021,
     "name": "Spiral Pierce",
     "max": 10,
-    "nextId": 1017,
-    "nextLevel": 5,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": 1017,
+    "prevLevel": 5
   },
   {
     "id": 1022,
     "name": "Brandish Spear",
     "max": 10,
-    "nextId": 1018,
-    "nextLevel": 5,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": 1018,
+    "prevLevel": 5
   },
   {
     "id": 1023,
     "name": "Head Crush",
     "max": 10,
-    "nextId": 1020,
-    "nextLevel": 5,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": 1020,
+    "prevLevel": 5
   },
   {
     "id": 1024,
@@ -221,8 +208,7 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 1025,
@@ -230,8 +216,7 @@
     "max": 10,
     "nextId": 1028,
     "nextLevel": 5,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 1026,
@@ -239,8 +224,7 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 1027,
@@ -248,17 +232,16 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 1028,
     "name": "Self-Ignite",
     "max": 10,
-    "nextId": 1025,
-    "nextLevel": 5,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": 1025,
+    "prevLevel": 5
   },
   {
     "id": 1029,
@@ -266,8 +249,7 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 1030,
@@ -275,18 +257,15 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 2000,
-    "name": "Cavalry Mastery",
+    "name": "Riding Mastery",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null,
-    "Notes": "All skills below here need name and prereq verification"
+    "prevId": null
   },
   {
     "id": 2001,
@@ -294,44 +273,39 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 2002,
-    "name": "Face",
+    "name": "Faith",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 2003,
-    "name": "Acceleration",
+    "name": "Weapon Speed",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 2006,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 2004,
-    "name": "Auto Guard",
+    "name": "Guard",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 2005,
-    "name": "Spear Training",
+    "name": "Spear Mastery",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 2008,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 2006,
@@ -339,35 +313,33 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 2003,
+    "prevLevel": 5
   },
   {
     "id": 2007,
     "name": "Shield Charge",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 2010,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 2008,
     "name": "Holy Cross",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 2011,
+    "nextLevel": 5,
+    "prevId": 2005,
+    "prevLevel": 5
   },
   {
     "id": 2009,
-    "name": "Tornado Slash",
+    "name": "Cyclone Strike",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 2010,
@@ -375,8 +347,8 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 2007,
+    "prevLevel": 5
   },
   {
     "id": 2011,
@@ -384,8 +356,8 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 2008,
+    "prevLevel": 5
   },
   {
     "id": 2012,
@@ -393,8 +365,7 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 2013,
@@ -402,71 +373,65 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 2014,
-    "name": "Divine Punishment",
+    "name": "Punish",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 2015,
-    "name": "Elevation",
+    "name": "Battle Intent",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 2018,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 2016,
-    "name": "Reflect Shield",
+    "name": "Shield Reflect",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 2019,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 2017,
-    "name": "Pressure",
-    "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
-  },
-  {
-    "id": 2018,
-    "name": "Exceed Break",
-    "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
-  },
-  {
-    "id": 2019,
-    "name": "Defender",
-    "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
-  },
-  {
-    "id": 2020,
     "name": "Pinpoint Attack",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
+  },
+  {
+    "id": 2018,
+    "name": "Charge Up",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": 2015,
+    "prevLevel": 5
+  },
+  {
+    "id": 2019,
+    "name": "Defending Aura",
+    "max": 10,
+    "nextId": 2022,
+    "nextLevel": 5,
+    "prevId": 2016,
+    "prevLevel": 5
+  },
+  {
+    "id": 2020,
+    "name": "Pressure",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null
   },
   {
     "id": 2021,
@@ -474,8 +439,7 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 2022,
@@ -483,35 +447,32 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 2019,
+    "prevLevel": 5
   },
   {
     "id": 2023,
-    "name": "Moon Slash",
+    "name": "Moon Slasher",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 3000,
-    "name": "Power Hit",
+    "name": "Brute Force",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 3001,
-    "name": "Inreased Evasion",
+    "name": "Improve Dodge",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 3002,
@@ -519,35 +480,31 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 3003,
     "name": "Double Attack",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 3008,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 3004,
     "name": "Hiding",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 3006,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 3005,
     "name": "Enchant Poison",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 3007,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 3006,
@@ -555,53 +512,51 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 3004,
+    "prevLevel": 5
   },
   {
     "id": 3007,
     "name": "Venom Knife",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 3010,
+    "nextLevel": 5,
+    "prevId": 3005,
+    "prevLevel": 5
   },
   {
     "id": 3008,
-    "name": "Armor Break",
+    "name": "Twin Blade Piercing",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 3003,
+    "prevLevel": 5
   },
   {
     "id": 3009,
     "name": "Enhanced Hiding",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 3012,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 3010,
-    "name": "Enhchant Poison",
+    "name": "Enhanced Enchant Poison",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 3007,
+    "prevLevel": 5
   },
   {
     "id": 3011,
     "name": "Sonic Blow",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 3014,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 3012,
@@ -609,26 +564,25 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 3009,
+    "prevLevel": 5
   },
   {
     "id": 3013,
-    "name": "Invernham",
+    "name": "Venom Dart",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 3014,
-    "name": "Sonic Blow Enhancement",
+    "name": "Supersonic Blow",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 3011,
+    "prevLevel": 5
   },
   {
     "id": 3015,
@@ -636,62 +590,57 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 3016,
-    "name": "Right Hand Training",
+    "name": "Right-Hand Mastery",
     "max": 5,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 3019,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 3017,
-    "name": "Roling Evasion",
+    "name": "Roll Away",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 3018,
-    "name": "Katar Training",
+    "name": "Katar Mastery",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 3021,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 3019,
-    "name": "Left Hand Training",
+    "name": "Left-Hand Mastery",
     "max": 5,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 3016,
+    "prevLevel": 5
   },
   {
     "id": 3020,
-    "name": "Assassinate",
+    "name": "Assassination Halo",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 3021,
-    "name": "Katar Studies",
+    "name": "Advanced Katar Mastery",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 3018,
+    "prevLevel": 5
   },
   {
     "id": 3022,
@@ -699,17 +648,15 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 3023,
     "name": "Slash",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 3026,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 3024,
@@ -717,35 +664,32 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 3025,
     "name": "Venom Dust",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 3028,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 3026,
-    "name": "Soul Breaker",
+    "name": "Soul Destroyer",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 3023,
+    "prevLevel": 5
   },
   {
     "id": 3027,
-    "name": "Phantom Blow",
+    "name": "Mirror Image",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 3028,
@@ -753,233 +697,224 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
-  },
-  {
-    "id": 3029,
-    "name": "Compulsive Discount",
-    "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 3025,
+    "prevLevel": 5
   },
   {
     "id": 4000,
+    "name": "Ambush",
+    "max": 10,
+    "nextId": 4002,
+    "nextLevel": 5,
+    "prevId": null
+  },
+  {
+    "id": 4001,
+    "name": "Compulsion Discount",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null
+  },
+  {
+    "id": 4002,
     "name": "Backstab",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
-  },
-  {
-    "id": 4001,
-    "name": "Poison Attack",
-    "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
-  },
-  {
-    "id": 4002,
-    "name": "Evoque",
-    "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 4000,
+    "prevLevel": 5
   },
   {
     "id": 4003,
-    "name": "Dagger Training",
+    "name": "Dip",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 4006,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 4004,
-    "name": "Poison Shot",
+    "name": "Evoked",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 4007,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 4005,
+    "name": "Dagger Mastery",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": null
+  },
+  {
+    "id": 4006,
+    "name": "Ranged Toxic Attack",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": 4003,
+    "prevLevel": 5
+  },
+  {
+    "id": 4007,
     "name": "Assault",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
-  },
-  {
-    "id": 4006,
-    "name": "Surprise Attack",
-    "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
-  },
-  {
-    "id": 4007,
-    "name": "Double Strafe",
-    "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 4004,
+    "prevLevel": 5
   },
   {
     "id": 4008,
-    "name": "Eagle Eye",
+    "name": "Raid",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 4009,
-    "name": "Close Confine",
+    "name": "Double Strafe",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 4012,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 4010,
-    "name": "Chain Shot",
+    "name": "Vulture's Eye",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 4011,
-    "name": "Clone Skill",
-    "max": 5,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "name": "Close Confine",
+    "max": 10,
+    "nextId": 4014,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 4012,
+    "name": "Repeated Shot",
+    "max": 10,
+    "nextId": null,
+    "nextLevel": null,
+    "prevId": 4009,
+    "prevLevel": 5
+  },
+  {
+    "id": 4013,
+    "name": "Clone Skill",
+    "max": 5,
+    "nextId": 4016,
+    "nextLevel": 5,
+    "prevId": null
+  },
+  {
+    "id": 4014,
     "name": "Intimidate",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 4011,
+    "prevLevel": 5
   },
   {
-    "id": 4013,
+    "id": 4015,
     "name": "Triangle Shot",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
-    "id": 4014,
-    "name": "Steal",
+    "id": 4016,
+    "name": "Filch",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 4013,
+    "prevLevel": 5
   },
   {
-    "id": 4015,
+    "id": 4017,
     "name": "Shadow Pierce",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
-  },
-  {
-    "id": 4016,
-    "name": "Manhole",
-    "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
-  },
-  {
-    "id": 4017,
-    "name": "Gangster Paradise",
-    "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 4018,
-    "name": "Strip Armor",
+    "name": "Man Hole",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 4019,
-    "name": "Pollution Arrow",
+    "name": "Gangster's Paradise",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 4020,
+    "name": "Strip Armor",
+    "max": 10,
+    "nextId": 4023,
+    "nextLevel": 5,
+    "prevId": null
+  },
+  {
+    "id": 4021,
+    "name": "Bone Rotting Arrow",
+    "max": 10,
+    "nextId": 4024,
+    "nextLevel": 5,
+    "prevId": null
+  },
+  {
+    "id": 4022,
     "name": "Reject Sword",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
-    "id": 4021,
+    "id": 4023,
     "name": "Strip Accessory",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 4020,
+    "prevLevel": 5
   },
   {
-    "id": 4022,
-    "name": "Death Arrow",
+    "id": 4024,
+    "name": "Poison Death Arrow",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 4021,
+    "prevLevel": 5
   },
   {
     "id": 5000,
     "name": "Double Strafe",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 5003,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 5001,
@@ -987,17 +922,15 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 5002,
     "name": "Ankle Snare",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 5005,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 5003,
@@ -1005,26 +938,25 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 5000,
+    "prevLevel": 5
   },
   {
     "id": 5004,
     "name": "Owl Eyes",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 5007,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 5005,
-    "name": "Freeze Trap",
+    "name": "Freezing Trap",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 5002,
+    "prevLevel": 5
   },
   {
     "id": 5006,
@@ -1032,17 +964,16 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 5007,
-    "name": "Eagle Eye",
+    "name": "Vulture's Eye",
     "max": 5,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 5004,
+    "prevLevel": 5
   },
   {
     "id": 5008,
@@ -1050,17 +981,15 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 5009,
-    "name": "Falcon Mastery",
+    "name": "Falconry Mastery",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 5012,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 5010,
@@ -1068,8 +997,7 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 5011,
@@ -1077,8 +1005,7 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 5012,
@@ -1086,17 +1013,16 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 5009,
+    "prevLevel": 5
   },
   {
     "id": 5013,
-    "name": "Blast Mine",
+    "name": "Electric Shock",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 5016,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 5014,
@@ -1104,17 +1030,15 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 5015,
-    "name": "Steel Claw",
+    "name": "Steel Crow",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 5018,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 5016,
@@ -1122,17 +1046,16 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 5013,
+    "prevLevel": 5
   },
   {
     "id": 5017,
     "name": "Wind Walk",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 5020,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 5018,
@@ -1140,8 +1063,8 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 5015,
+    "prevLevel": 5
   },
   {
     "id": 5019,
@@ -1149,8 +1072,7 @@
     "max": 5,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 5020,
@@ -1158,44 +1080,40 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 5017,
+    "prevLevel": 5
   },
   {
     "id": 5021,
-    "name": "Flyton?",
+    "name": "Intimidation",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 5022,
     "name": "Sandman",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 5025,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 5023,
-    "name": "Multishot",
+    "name": "Multi Firing",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 5026,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 5024,
-    "name": "Beast Tamer",
+    "name": "Ace Tamer",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 5027,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 5025,
@@ -1203,26 +1121,26 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 5022,
+    "prevLevel": 5
   },
   {
     "id": 5026,
-    "name": "Sharpshooting",
+    "name": "Sharp Shooting",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 5023,
+    "prevLevel": 5
   },
   {
     "id": 5027,
-    "name": "Wild Release",
+    "name": "Wild Awakening",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 5024,
+    "prevLevel": 5
   },
   {
     "id": 5028,
@@ -1230,36 +1148,31 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 6000,
-    "name": "Instrument Practice",
+    "name": "Music Lessons",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null,
-    "Notes": "bard"
+    "nextId": 6003,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 6001,
     "name": "Dissonance",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 6004,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 6002,
     "name": "Ensemble Invitation",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 6005,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 6003,
@@ -1267,62 +1180,60 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 6000,
+    "prevLevel": 5
   },
   {
     "id": 6004,
-    "name": "Assassin's Cross of the Sunset",
+    "name": "Assassin Cross of Sunset",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 6007,
+    "nextLevel": 5,
+    "prevId": 6001,
+    "prevLevel": 5
   },
   {
     "id": 6005,
-    "name": "The Sound of War Drums",
+    "name": "A Drum on the Battlefield",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 6008,
+    "nextLevel": 5,
+    "prevId": 6002,
+    "prevLevel": 5
   },
   {
     "id": 6006,
-    "name": "Sound Beat",
+    "name": "Energy Beat",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 6007,
-    "name": "Idun's Apple",
+    "name": "The Apple of Idun",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 6004,
+    "prevLevel": 5
   },
   {
     "id": 6008,
-    "name": "Njord's Feast",
+    "name": "Mr. Kim A Rich Man",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 6005,
+    "prevLevel": 5
   },
   {
     "id": 6009,
-    "name": "Bad Joke",
+    "name": "Frost Joker",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 6010,
@@ -1330,44 +1241,39 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 6011,
-    "name": "Ad-lib",
+    "name": "Adaptation to Circumstances",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 6012,
     "name": "Arrow Vulcan",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 6015,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 6013,
-    "name": "Bragi's Poem",
+    "name": "Poem of Bragi",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 6016,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 6014,
-    "name": "Panvoice",
+    "name": "Pang Voice",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 6015,
@@ -1375,26 +1281,25 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 6012,
+    "prevLevel": 5
   },
   {
     "id": 6016,
-    "name": "Whistling",
+    "name": "A Whistle",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 6013,
+    "prevLevel": 5
   },
   {
     "id": 6017,
     "name": "Eternal Chaos",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 6020,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 6018,
@@ -1402,35 +1307,32 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 6019,
-    "name": "Don't Tie Me Down",
+    "name": "Longing for Freedom",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 6020,
-    "name": "Immortal Siegfried",
+    "name": "Invulnerable Siegfried",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 6017,
+    "prevLevel": 5
   },
   {
     "id": 6021,
-    "name": "Excite Note",
+    "name": "Polymeric Note",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 6022,
@@ -1438,37 +1340,31 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 6023,
-    "name": "The Mists of Lera",
+    "name": "Lerod's Dew",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 7000,
-    "name": "Dance Practice",
+    "name": "Dancing Lesson",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null,
-    "Notes": "dancer"
+    "prevId": null
   },
   {
     "id": 7001,
-    "name": "Selfish Dance",
+    "name": "Ugly Dance",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null,
-    "Notes": "figure out what to do with duplicates"
+    "nextId": 7004,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 7002,
@@ -1476,62 +1372,58 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 7003,
-    "name": "Arrow Shooting",
+    "name": "Throw Arrow",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 7004,
     "name": "Humming",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 7007,
+    "nextLevel": 5,
+    "prevId": 7001,
+    "prevLevel": 5
   },
   {
     "id": 7005,
-    "name": "The Sound of War Drums",
+    "name": "A Drum on the Battlefield",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 7008,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 7006,
-    "name": "Sound Beat",
+    "name": "Energy Beat",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 7007,
-    "name": "Moonlight Serenade",
+    "name": "Moonlit Serenade",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 7004,
+    "prevLevel": 5
   },
   {
     "id": 7008,
-    "name": "Njord's Feast",
+    "name": "Mr. Kim A Rich Man",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 7005,
+    "prevLevel": 5
   },
   {
     "id": 7009,
@@ -1539,8 +1431,7 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 7010,
@@ -1548,44 +1439,39 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 7011,
-    "name": "Ad-lib",
+    "name": "Adaptation to Circumstances",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 7012,
     "name": "Arrow Vulcan",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 7015,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 7013,
-    "name": "Lucky Kiss",
+    "name": "Fortune's Kiss",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 7016,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 7014,
-    "name": "A Captivating Wink",
+    "name": "Wink of Charm",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 7015,
@@ -1593,26 +1479,25 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 7012,
+    "prevLevel": 5
   },
   {
     "id": 7016,
-    "name": "Don't Forget Me",
+    "name": "Please Don't Forget Me",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 7013,
+    "prevLevel": 5
   },
   {
     "id": 7017,
     "name": "Eternal Chaos",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 7020,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 7018,
@@ -1620,17 +1505,15 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 7019,
-    "name": "Don't Tie Me Down",
+    "name": "Longing for Freedom",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 7020,
@@ -1638,17 +1521,16 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 7017,
+    "prevLevel": 5
   },
   {
     "id": 7021,
-    "name": "Excite Note",
+    "name": "Polymeric Note",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 7022,
@@ -1656,17 +1538,15 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 7023,
-    "name": "The Mists of Lera",
+    "name": "Lerod's Dew",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 8000,
@@ -1674,18 +1554,15 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null,
-    "Notes": "wizard"
+    "prevId": null
   },
   {
     "id": 8001,
-    "name": "Firebolt",
+    "name": "Fire Bolt",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 8002,
@@ -1693,8 +1570,7 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 8003,
@@ -1702,35 +1578,31 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 8004,
-    "name": "Fireball",
+    "name": "Fire Ball",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 8007,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 8005,
-    "name": "Earth Spike",
+    "name": "Heaven's Drive",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 8006,
     "name": "Cold Bolt",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 8009,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 8007,
@@ -1738,17 +1610,16 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 8004,
+    "prevLevel": 5
   },
   {
     "id": 8008,
-    "name": "Improved SP Recovery",
+    "name": "Zen",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 8012,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 8009,
@@ -1756,8 +1627,8 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 8006,
+    "prevLevel": 5
   },
   {
     "id": 8010,
@@ -1765,8 +1636,7 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 8011,
@@ -1774,8 +1644,7 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 8012,
@@ -1783,8 +1652,8 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 8008,
+    "prevLevel": 5
   },
   {
     "id": 8013,
@@ -1792,26 +1661,23 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 8014,
     "name": "Fire Pillar",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 8017,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 8015,
     "name": "Jupitel Thunder",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 8018,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 8016,
@@ -1819,44 +1685,42 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 8017,
-    "name": "Ignition",
+    "name": "Kindle",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 8021,
+    "nextLevel": 5,
+    "prevId": 8014,
+    "prevLevel": 5
   },
   {
     "id": 8018,
     "name": "Lord of Vermillion",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 8022,
+    "nextLevel": 5,
+    "prevId": 8015,
+    "prevLevel": 5
   },
   {
     "id": 8019,
     "name": "Napalm Beat",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 8020,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 8020,
     "name": "Napalm Vulcan",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 8023,
+    "nextLevel": 5,
+    "prevId": 8019,
+    "prevLevel": 5
   },
   {
     "id": 8021,
@@ -1864,8 +1728,8 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 8017,
+    "prevLevel": 5
   },
   {
     "id": 8022,
@@ -1873,8 +1737,8 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 8018,
+    "prevLevel": 5
   },
   {
     "id": 8023,
@@ -1882,26 +1746,24 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 8020,
+    "prevLevel": 5
   },
   {
     "id": 8024,
-    "name": "Quagmire",
+    "name": "Abyssal Swamp",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 8027,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 8025,
-    "name": "Overcurrent",
+    "name": "Earth Spike",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 8026,
@@ -1909,35 +1771,32 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 8027,
-    "name": "Gravity Field",
+    "name": "Gravitational Field",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 8024,
+    "prevLevel": 5
   },
   {
     "id": 8028,
-    "name": "Heaven's Drive",
+    "name": "Magic Amplification",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 9000,
-    "name": "Advanced Book",
+    "name": "Book Mastery",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 9003,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 9001,
@@ -1945,17 +1804,15 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 9002,
     "name": "Cast Inertia",
     "max": 5,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 9005,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 9003,
@@ -1963,17 +1820,16 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 9000,
+    "prevLevel": 5
   },
   {
     "id": 9004,
     "name": "Magic Rod",
     "max": 5,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 9007,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 9005,
@@ -1981,53 +1837,51 @@
     "max": 5,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 9002,
+    "prevLevel": 5
   },
   {
     "id": 9006,
-    "name": "Elemental Marker",
+    "name": "Elemental Mark",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 9009,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 9007,
     "name": "Spell Breaker",
     "max": 5,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 9010,
+    "nextLevel": 5,
+    "prevId": 9004,
+    "prevLevel": 5
   },
   {
     "id": 9008,
     "name": "Bolt Enhancement",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 9011,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 9009,
-    "name": "Elemental Marker Enhancement",
+    "name": "Element Bonus",
     "max": 5,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 9012,
+    "nextLevel": 5,
+    "prevId": 9006,
+    "prevLevel": 5
   },
   {
     "id": 9010,
-    "name": "Dispel",
+    "name": "Dispell",
     "max": 5,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 9007,
+    "prevLevel": 5
   },
   {
     "id": 9011,
@@ -2035,44 +1889,42 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 9008,
+    "prevLevel": 5
   },
   {
     "id": 9012,
     "name": "Spider Web",
     "max": 5,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 9015,
+    "nextLevel": 5,
+    "prevId": 9009,
+    "prevLevel": 5
   },
   {
     "id": 9013,
-    "name": "Convert Life",
+    "name": "Health Conversion",
     "max": 5,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 9016,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 9014,
     "name": "Memorize",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 9017,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 9015,
     "name": "Spell Fist",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 9018,
+    "nextLevel": 5,
+    "prevId": 9012,
+    "prevLevel": 5
   },
   {
     "id": 9016,
@@ -2080,17 +1932,17 @@
     "max": 5,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 9013,
+    "prevLevel": 5
   },
   {
     "id": 9017,
-    "name": "Double Cast",
+    "name": "Double Casting",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 9014,
+    "prevLevel": 5
   },
   {
     "id": 9018,
@@ -2098,17 +1950,16 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 9015,
+    "prevLevel": 5
   },
   {
     "id": 9019,
     "name": "Mind Drain",
     "max": 5,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 9022,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 9020,
@@ -2116,17 +1967,15 @@
     "max": 5,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 9021,
-    "name": "Element Knowledge",
+    "name": "Elemental Knowledge",
     "max": 5,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 9022,
@@ -2134,90 +1983,82 @@
     "max": 5,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 9019,
+    "prevLevel": 5
   },
   {
     "id": 9023,
-    "name": "Area Extend",
+    "name": "Extended Field",
     "max": 5,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 10000,
     "name": "Heal",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null,
-    "Notes": "priest"
+    "nextId": 10003,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 10001,
     "name": "Blessing",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 10004,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 10002,
-    "name": "Mace Training",
+    "name": "Mace Mastery",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 10003,
-    "name": "Healing Light",
+    "name": "Soulmender",
     "max": 5,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 10000,
+    "prevLevel": 5
   },
   {
     "id": 10004,
-    "name": "Increase AGI",
+    "name": "Increase Agility",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 10001,
+    "prevLevel": 5
   },
   {
     "id": 10005,
-    "name": "Signum Crucic",
+    "name": "Signum Crucis",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 10006,
-    "name": "Light's Blessing",
+    "name": "Light Blessing",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 10007,
     "name": "Holy Light",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 10010,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 10008,
@@ -2225,35 +2066,32 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 10009,
-    "name": "Improved SP Recovery",
+    "name": "Increase SP Recovery",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 10010,
-    "name": "Divine Amplification",
+    "name": "Holy Booster",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 10007,
+    "prevLevel": 5
   },
   {
     "id": 10011,
-    "name": "Imposito Manus",
+    "name": "Impositio Manus",
     "max": 5,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 10012,
@@ -2261,8 +2099,7 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 10013,
@@ -2270,8 +2107,7 @@
     "max": 5,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 10014,
@@ -2279,26 +2115,23 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 10015,
     "name": "Ruwach",
     "max": 5,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 10018,
+    "nextLevel": 3,
+    "prevId": null
   },
   {
     "id": 10016,
     "name": "Angelus",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 10019,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 10017,
@@ -2306,8 +2139,7 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 10018,
@@ -2315,8 +2147,8 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 10015,
+    "prevLevel": 3
   },
   {
     "id": 10019,
@@ -2324,8 +2156,8 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 10016,
+    "prevLevel": 5
   },
   {
     "id": 10020,
@@ -2333,17 +2165,15 @@
     "max": 5,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 10021,
-    "name": "Expatio",
+    "name": "Expiatio",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 10022,
@@ -2351,26 +2181,23 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 10023,
     "name": "Turn Undead",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 10026,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 10024,
-    "name": "Medidatio",
+    "name": "Meditatio",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 10025,
@@ -2378,8 +2205,7 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 10026,
@@ -2387,26 +2213,24 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 10023,
+    "prevLevel": 5
   },
   {
     "id": 10027,
-    "name": "Reduce AGI",
+    "name": "Decrease Agility",
     "max": 5,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 10028,
-    "name": "Judex",
+    "name": "Judge",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 10029,
@@ -2414,17 +2238,15 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 10030,
     "name": "Coluceo Heal",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 10033,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 10031,
@@ -2432,8 +2254,7 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 10032,
@@ -2441,8 +2262,7 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 10033,
@@ -2450,17 +2270,16 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 10030,
+    "prevLevel": 5
   },
   {
     "id": 10034,
-    "name": "Damnation",
+    "name": "Demon Bane",
     "max": 5,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 10035,
@@ -2468,8 +2287,7 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 10036,
@@ -2477,18 +2295,15 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 11000,
-    "name": "Shippuken",
+    "name": "Torrential Rain",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null,
-    "Notes": "monk"
+    "nextId": 11003,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 11001,
@@ -2496,162 +2311,153 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null,
-    "Notes": "all the names i dont know"
+    "prevId": null
   },
   {
     "id": 11002,
-    "name": "Ki Fist",
+    "name": "Spirit Sphere Attack",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 11005,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 11003,
-    "name": "Triple Strike",
+    "name": "Triple Attack",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 11006,
+    "nextLevel": 5,
+    "prevId": 11000,
+    "prevLevel": 5
   },
   {
     "id": 11004,
-    "name": "Ki",
+    "name": "Call Spirits",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 11007,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 11005,
-    "name": "Release Internal Power",
+    "name": "Investigate",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 11008,
+    "nextLevel": 5,
+    "prevId": 11002,
+    "prevLevel": 5
   },
   {
     "id": 11006,
-    "name": "Quadruple Strike",
+    "name": "Raging Quadruple Blow",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 11009,
+    "nextLevel": 5,
+    "prevId": 11003,
+    "prevLevel": 5
   },
   {
     "id": 11007,
-    "name": "Ki Training",
+    "name": "Zen",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 11010,
+    "nextLevel": 5,
+    "prevId": 11004,
+    "prevLevel": 5
   },
   {
     "id": 11008,
     "name": "Ki Wave",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 11011,
+    "nextLevel": 5,
+    "prevId": 11005,
+    "prevLevel": 5
   },
   {
     "id": 11009,
-    "name": "Fierce Dragon Fist",
+    "name": "Combo Finish",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 11006,
+    "prevLevel": 5
   },
   {
     "id": 11010,
-    "name": "Explosion Wave",
+    "name": "Critical Explosion",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 11007,
+    "prevLevel": 5
   },
   {
     "id": 11011,
-    "name": "Throw Spirit Sphere",
+    "name": "Finger Offensive",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 11008,
+    "prevLevel": 5
   },
   {
     "id": 11012,
-    "name": "Dimensions?",
+    "name": "Excruciating Palm",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 11013,
-    "name": "Folded Tiger Fist?",
+    "name": "Tiger Knuckle Fist",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 11016,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 11014,
-    "name": "Breath?",
+    "name": "Spirits Recovery",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 11015,
-    "name": "Sky Slash Wave?",
+    "name": "Blade Stop",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 11018,
+    "nextLevel": 3,
+    "prevId": null
   },
   {
     "id": 11016,
-    "name": "Collapse Attack?",
+    "name": "Chain Crush Combo",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 11019,
+    "nextLevel": 5,
+    "prevId": 11013,
+    "prevLevel": 5
   },
   {
     "id": 11017,
-    "name": "Fierce Tiger Palm",
+    "name": "Palm Push Strike",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 11018,
-    "name": "Inhalation Exercise",
+    "name": "Assimilate Power",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 11015,
+    "prevLevel": 3
   },
   {
     "id": 11019,
@@ -2659,26 +2465,24 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 11016,
+    "prevLevel": 5
   },
   {
     "id": 11020,
-    "name": "Remaining Shadow",
+    "name": "Body Relocation",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 11021,
-    "name": "Explosive Shot",
+    "name": "Rampage Blaster",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 11022,
@@ -2686,44 +2490,39 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 11023,
-    "name": "Point Hole Ball...",
+    "name": "Gentle Touch - Energy Gain",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 11024,
-    "name": "Ki Infusion",
+    "name": "Power Velocity",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 12000,
-    "name": "Bounty Hunter",
+    "name": "Midas Touch",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 12003,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 12001,
-    "name": "Push Cart",
+    "name": "Pushcart",
     "max": 5,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 12004,
+    "nextLevel": 1,
+    "prevId": null
   },
   {
     "id": 12002,
@@ -2731,8 +2530,7 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 12003,
@@ -2740,8 +2538,8 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 12000,
+    "prevLevel": 5
   },
   {
     "id": 12004,
@@ -2749,44 +2547,40 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 12001,
+    "prevLevel": 1
   },
   {
     "id": 12005,
-    "name": "Fighting Will",
+    "name": "Battle Will",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 12006,
     "name": "Discount",
     "max": 5,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 12009,
+    "nextLevel": 1,
+    "prevId": null
   },
   {
     "id": 12007,
-    "name": "Weight Increase",
+    "name": "Enlarge Weight Limit",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 12011,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 12008,
     "name": "Crazy Uproar",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 12012,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 12009,
@@ -2794,35 +2588,34 @@
     "max": 5,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 12006,
+    "prevLevel": 1
   },
   {
     "id": 12010,
-    "name": "Weapon Improvement",
+    "name": "Weaponry Research",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 12011,
-    "name": "Cart Enhancement",
+    "name": "Weight Utility",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 12007,
+    "prevLevel": 5
   },
   {
     "id": 12012,
-    "name": "Overthrust",
+    "name": "Over Thrust",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 12008,
+    "prevLevel": 5
   },
   {
     "id": 12013,
@@ -2830,44 +2623,39 @@
     "max": 5,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 12014,
-    "name": "Cart Throw",
+    "name": "Cart Hurt",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 12015,
     "name": "Adrenaline Rush",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 12018,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 12016,
-    "name": "Hammerfall",
+    "name": "Hammer Fall",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 12017,
-    "name": "Cart Charge",
+    "name": "Cart Blitz",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 12022,
+    "nextLevel": 1,
+    "prevId": null
   },
   {
     "id": 12018,
@@ -2875,89 +2663,85 @@
     "max": 5,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 12015,
+    "prevLevel": 5
   },
   {
     "id": 12019,
-    "name": "Greed",
+    "name": "Unfair Trick",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 12021,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 12020,
-    "name": "Wild Swing",
+    "name": "Savage Slash",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 12023,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 12021,
     "name": "Fake Zeny",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 12024,
+    "nextLevel": 5,
+    "prevId": 12019,
+    "prevLevel": 5
   },
   {
     "id": 12022,
-    "name": "Cart Rush",
+    "name": "Cart Assault",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 12017,
+    "prevLevel": 1
   },
   {
     "id": 12023,
     "name": "Meltdown",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 12026,
+    "nextLevel": 5,
+    "prevId": 12020,
+    "prevLevel": 5
   },
   {
     "id": 12024,
-    "name": "Zeny Power",
+    "name": "Zeny Utility",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 12021,
+    "prevLevel": 5
   },
   {
     "id": 12025,
     "name": "Cart Boost",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 12028,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 12026,
-    "name": "Wild Cleaver",
+    "name": "Savagery",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 12023,
+    "prevLevel": 5
   },
   {
     "id": 12027,
-    "name": "Zeny Throw",
+    "name": "Hurl Zeny",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 12030,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 12028,
@@ -2965,17 +2749,16 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 12025,
+    "prevLevel": 5
   },
   {
     "id": 12029,
-    "name": "Overthrust MAX",
+    "name": "Maximum Over Thrust",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 12030,
@@ -2983,53 +2766,49 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 12027,
+    "prevLevel": 5
   },
   {
     "id": 13000,
-    "name": "Impact Slash",
+    "name": "Reckless Potion",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 13003,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 13001,
-    "name": "Axe and Mace Training",
+    "name": "Axe Mastery",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 13002,
-    "name": "Bio Plant",
+    "name": "Bio Cannibalize",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 13005,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 13003,
-    "name": "Physical Strengthening",
+    "name": "Gene Upgrade",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 13000,
+    "prevLevel": 5
   },
   {
     "id": 13004,
     "name": "Call Homunculus",
     "max": 4,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 13007,
+    "nextLevel": 1,
+    "prevId": null
   },
   {
     "id": 13005,
@@ -3037,44 +2816,42 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 13002,
+    "prevLevel": 5
   },
   {
     "id": 13006,
     "name": "Demonstration",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 13009,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 13007,
-    "name": "Repose",
+    "name": "Rest",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 13004,
+    "prevLevel": 1
   },
   {
     "id": 13008,
     "name": "Pharmacy",
-    "max": 10,
+    "max": 5,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 13009,
     "name": "Acid Terror",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 13012,
+    "nextLevel": 5,
+    "prevId": 13006,
+    "prevLevel": 5
   },
   {
     "id": 13010,
@@ -3082,17 +2859,15 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 13011,
-    "name": "Learning Potion?",
+    "name": "Learning Potion",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 13014,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 13012,
@@ -3100,35 +2875,33 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 13009,
+    "prevLevel": 5
   },
   {
     "id": 13013,
-    "name": "Cart Enhancement",
+    "name": "Cart Upgrade",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 13016,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 13014,
     "name": "Slim Potion Pitcher",
-    "max": 10,
+    "max": 5,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 13011,
+    "prevLevel": 5
   },
   {
     "id": 13015,
-    "name": "Bloodsucker",
+    "name": "Blood Sucker",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 13016,
@@ -3136,26 +2909,24 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 13013,
+    "prevLevel": 5
   },
   {
     "id": 13017,
-    "name": "Hell Plant",
+    "name": "Hell's Plant",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 13018,
-    "name": "Hallucinogenic Drug",
+    "name": "Illusion Doping",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 13019,
@@ -3163,17 +2934,15 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 13020,
-    "name": "Chemical Protect Armor",
+    "name": "Chemical Armor",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "nextId": 13023,
+    "nextLevel": 5,
+    "prevId": null
   },
   {
     "id": 13021,
@@ -3181,25 +2950,23 @@
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 13022,
-    "name": "Homunculus Enhancement",
+    "name": "Homunculus Upgrade",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": null
   },
   {
     "id": 13023,
-    "name": "Chemical Protect Accessories",
+    "name": "Chemical Accessory",
     "max": 10,
     "nextId": null,
     "nextLevel": null,
-    "prevId": null,
-    "prevLevel": null
+    "prevId": 13020,
+    "prevLevel": 5
   }
 ]
