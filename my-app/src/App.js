@@ -10,14 +10,17 @@ import { useLocation, matchPath, useNavigate } from 'react-router-dom';
 function App() {
   const location = useLocation();
   const navigate = useNavigate();
-  const currentPath = location.pathname;
+  const currentHash = location.pathname;
   const [jobId, setJob] = useState(1);
   const [skillLevels, setSkills] = useState({});
   const [copySuccess, setCopySuccess] = useState('');
 
   useEffect(() => {
-    if (currentPath) {
-      const isShaPath = matchPath("/planner/:encoded", currentPath)
+    // Just unga bunga fix this condition on load
+    if (window.location.pathname === '/planner' || window.location.pathname === '/planner#') {
+      window.location.pathname = '/planner/'
+    } else if (currentHash) {
+      const isShaPath = matchPath("/:encoded", currentHash)
       if (isShaPath) {
         try {
           const sha = isShaPath.params.encoded
@@ -26,13 +29,21 @@ function App() {
           if (parsed) {
             setJob(parsed.jobId)
             setSkills(parsed.skillLevels)
+            if (!copySuccess) {
+              setCopySuccess('Imported!');
+              setTimeout(() => {
+                setCopySuccess('');
+              }, 2000); // Reset message after 2 seconds
+            }
           }
         } catch {
+          console.log('giveup')
           // just give up
-          navigate('/planner', { replace: true })
+          navigate('/', { replace: true })
         }
       }
-  }}, [currentPath, navigate])
+    }
+  }, [currentHash, location, navigate])
   // Only depend on the path changing. Everything else is fine.
 
   const handlePackData = async () => {
@@ -45,8 +56,11 @@ function App() {
     })
 
     const base64String = Buffer.from(packed).toString('base64');
+    console.log(base64String)
 
     if (base64String) {
+      // navigate first
+      navigate(`/${base64String}`, { replace: true });
       // Copy to clipboard
       try {
         await navigator.clipboard.writeText(window.location.href);
@@ -57,9 +71,7 @@ function App() {
       } catch (err) {
         setCopySuccess('Failed to copy URL');
       }
-      navigate(`/planner/${base64String}`, { replace: true });
     }
-
   }
 
   const jobList = jobData.jobs
@@ -70,11 +82,13 @@ function App() {
         if (window.confirm("Changing job will reset all skills. Continue?")) {
           setSkills({})
           setJob(jobId)
+          navigate('/', { replace: true });
           window.scrollTo({ top: 0, left: 0})
         }
       } else {
         setSkills({})
         setJob(jobId)
+        navigate('/', { replace: true });
         window.scrollTo({ top: 0, left: 0})
       }
   }
@@ -83,6 +97,7 @@ function App() {
     if (window.confirm("Are you sure you want to reset all skills?")) {
       // Proceed with submission
       setSkills({})
+      navigate('/', { replace: true });
     } else {
     }  
   }

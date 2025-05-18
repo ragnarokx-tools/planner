@@ -28,7 +28,8 @@
 }
 
 .App-jobContent {
-  margin-top: calc(max(4vh, 4vmin));
+  margin-top: calc(max(6vh, 6vmin));
+  padding-bottom: 4vmin;
 }
 
 .App-jobName select {

@@ -58,6 +58,7 @@
   border: solid 1px black;
   cursor: pointer;
   background-color: lightblue;
+  touch-action: manipulation;
 }
 
 .Skill-button.Skill-buttonDisabled {

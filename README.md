@@ -1,4 +1,8 @@
-# Ragnarok X Tools
+# Ragnarok X Tools - Skill Planner
 
-- The skill planner works now.
+An unofficial, light-weight Ragnarok X skill planner. Plan and share your skill loadouts with other players.
+
+[Skill Planner](http://ragnarokx.github.com/planner)
+
+![Example screenshot](./exampleScreenshot.png)
 
