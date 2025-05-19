@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import jobData from './resources/jobs.json'
 import skillData from './resources/skills.json'
@@ -6,6 +6,8 @@ import Job from './job/Job.js';
 import skillSprites from './icons/all_skills_global.png'
 import { Buffer } from 'buffer';
 import { useLocation, matchPath, useNavigate } from 'react-router-dom';
+import ReactGA from "react-ga4";
+
 
 function App() {
   const location = useLocation();
@@ -16,10 +18,26 @@ function App() {
   const [copySuccess, setCopySuccess] = useState('');
 
   useEffect(() => {
+    try {
+      setTimeout(_ => {
+        ReactGA.initialize("G-10CRLLHRXZ");
+        ReactGA.send({ hitType: "pageview", page: currentHash });
+      }, 4000)
+      } catch(err) {
+      console.log(err)
+    }
+  }, [])
+
+  useEffect(() => {
     // Just unga bunga fix this condition on load
     if (window.location.pathname === '/planner' || window.location.pathname === '/planner#') {
       window.location.pathname = '/planner/'
     } else if (currentHash) {
+      ReactGA.event({
+        category: "Builds",
+        action: "Load Path",
+        label: currentHash
+      });
       const isShaPath = matchPath("/:encoded", currentHash)
       if (isShaPath) {
         try {
@@ -35,11 +53,22 @@ function App() {
                 setCopySuccess('');
               }, 2000); // Reset message after 2 seconds
             }
+            ReactGA.event({
+              category: "Builds",
+              action: "Load",
+              label: "Success", // optional
+              value: parsed.jobId // optional, must be a number
+            });
           }
         } catch {
-          console.log('giveup')
+          console.log("redirecting due to unparsed build")
           // just give up
           navigate('/', { replace: true })
+          ReactGA.event({
+            category: "Builds",
+            action: "Load",
+            label: "Failure"
+          });
         }
       }
     }
@@ -47,6 +76,11 @@ function App() {
   // Only depend on the path changing. Everything else is fine.
 
   const handlePackData = async () => {
+    ReactGA.event({
+      category: "Builds",
+      action: "Save",
+      label: "Attempted"
+    });
     const skillLevelsClean =  Object.fromEntries(
       Object.entries(skillLevels).filter(([key, value]) => value !== 0)
     )
@@ -56,7 +90,6 @@ function App() {
     })
 
     const base64String = Buffer.from(packed).toString('base64');
-    console.log(base64String)
 
     if (base64String) {
       // navigate first
@@ -68,6 +101,12 @@ function App() {
         setTimeout(() => {
           setCopySuccess('');
         }, 2000); // Reset message after 2 seconds
+        ReactGA.event({
+          category: "Builds",
+          action: "Save",
+          label: "Success",
+          value: jobId
+        });
       } catch (err) {
         setCopySuccess('Failed to copy URL');
       }
