@@ -1,0 +1,6 @@
+.SkillSprite {
+  max-width: 100px;
+  aspect-ratio: 1;
+  text-overflow: clip;
+  overflow: hidden;
+}

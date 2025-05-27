@@ -7,6 +7,7 @@ import skillSprites from './icons/all_skills_global.png'
 import { Buffer } from 'buffer';
 import { useLocation, matchPath, useNavigate } from 'react-router-dom';
 import ReactGA from "react-ga4";
+import SkillSprite from './skillsprite/SkillSprite.js';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
   const [jobId, setJob] = useState(1);
   const [skillLevels, setSkills] = useState({});
   const [copySuccess, setCopySuccess] = useState('');
+  const [showSummary, setSummaryVisible] = useState(false);
 
   useEffect(() => {
     try {
@@ -81,7 +83,7 @@ function App() {
       action: "Save",
       label: "Attempted"
     });
-    const skillLevelsClean =  Object.fromEntries(
+    const skillLevelsClean = Object.fromEntries(
       Object.entries(skillLevels).filter(([key, value]) => value !== 0)
     )
     const packed = JSON.stringify({
@@ -144,13 +146,23 @@ function App() {
   // join the job skillTree with the skill data
   const getJobDataById = () => {
     const jobObject = jobList.find(job => job.id === jobId)
+    const skillsById = getSkillsByJob()
+    return {...jobObject, "skills": skillsById}
+  }
+
+  const getSkillsByJob = () => {
+    const jobObject = jobList.find(job => job.id === jobId)
     const skillTree = jobObject.skillTree
+    let skills = {}
     if (skillTree) {
-      const skills = skillData.filter((skill) => skillTree.some((skillId) => skillId === skill.id))
-      return {...jobObject, "skills": skills}
-    } else {
-      return jobObject
+      skillData.forEach((skill) => {
+        if (skillTree.some((skillId) => skillId === skill.id)) {
+          const {id: skillId, ...skillRest} = skill
+          skills[skill.id] = skillRest
+        }
+      })
     }
+    return skills
   }
 
   if (!jobData) {
@@ -182,7 +194,49 @@ function App() {
     return <div className="App-totalJobPoints">{sum}/170{advisory}</div>
   }
 
-  const jobSelector = () => {
+  const onToggleSummary = () => {
+    setSummaryVisible(!showSummary)
+  }
+
+  const renderSkillSummary = () => {
+    let summary;
+    try {
+      if (skillLevels) {
+        const skillsByJob = getSkillsByJob()
+        summary = Object.entries(skillLevels).map(
+          ([skillId, skillLevel], _) => {
+            if (skillLevel > 0) {
+              const foundSkill = skillsByJob[skillId]
+              const {name, max, spriteIndex} = foundSkill
+              return <div className="App-summaryLine">
+                  <div className="App-miniIcon">
+                    <SkillSprite spriteIndex={spriteIndex}/>
+                  </div>
+                  <div className="App-summaryLevel">
+                    {name}: {skillLevel}/{max}
+                  </div>
+                </div>
+            } else {
+              return null
+            }
+        })
+      }
+    } catch {
+      console.log("unable to render summary")
+    }
+
+    let showHideSummary = showSummary ? "hide summary" : "show summary"
+    let maybeStyle = showSummary ? {} : {display: "none"}
+
+    return <div className="App-skillSummary">
+      <div className="App-skillSummaryControls">
+        <button onClick={onToggleSummary}>{showHideSummary}</button>
+      </div>
+      <div className="App-skillSummaryList" style={maybeStyle}>{summary}</div>
+    </div>
+  }
+
+  const renderJobSelector = () => {
     return (
     <select name="job" value={jobId} onChange={onChangeJobHandler}>
       {jobList.map((job) => <option key={job.id} value={job.id}>{job.name}</option>)}
@@ -193,11 +247,12 @@ function App() {
   const header = () => {
     return (
       <div className="App-header">
-        <div className="App-jobName">{jobSelector()}</div>
+        <div className="App-jobName">{renderJobSelector()}</div>
         {renderTotalSkillPointsUsed()}
         <div className="App-jobButtons">
           {renderSaveButton()}{renderResetButton()}
         </div>
+        {renderSkillSummary()}
         {copySuccess ? 
           <div className="App-copiedUrl" style={{height: "24px"}}>{copySuccess}</div> :
           <div className="App-copiedUrl" style={{height: "0px"}}></div>

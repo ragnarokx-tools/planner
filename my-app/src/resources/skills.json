@@ -83,8 +83,8 @@
     "id": 1008,
     "name": "Spear Mastery",
     "max": 10,
-    "nextId": null,
-    "nextLevel": null,
+    "nextId": 1011,
+    "nextLevel": 5,
     "prevId": null,
     "prevLevel": null,
     "spriteIndex": 8
@@ -115,8 +115,8 @@
     "max": 10,
     "nextId": 1014,
     "nextLevel": 5,
-    "prevId": null,
-    "prevLevel": null,
+    "prevId": 1011,
+    "prevLevel": 5,
     "spriteIndex": 11
   },
   {

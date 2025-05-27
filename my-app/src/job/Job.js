@@ -1,40 +1,23 @@
 import Skill from "../skill/Skill.js"
 import "./job.css"
 
-function Job({data: jobData, skillLevels, setSkills, spriteSheet}) {
+function Job({data: jobData, skillLevels, setSkills}) {
 
   const {name, skillTree, skills} = jobData
 
-  const modifySpecificSkill = (skillObject) => 
-    (value) => setSkills(prevSkills => {
-      const {id: skillId, max} = skillObject
-      return {
-        ...prevSkills,
-        [skillId]: Math.max(Math.min(max, value),0),
+  const modifySpecificSkill = (skillId, max) => 
+    (newValue) => setSkills(prevSkills => {
+      // const {id: skillId, max} = skillObject
+      let {[skillId]: _, ...rest} = prevSkills
+      if (newValue <= 0) {
+        return rest
+      } else {
+        return {
+          ...rest,
+          [skillId]: Math.max(Math.min(max, newValue),0),
+        }
       }
     })
-
-  const iconSize = 100
-  const renderSprite = (skillId, skillObject) => {
-    // all sprite sheets are constructed using the following:
-    // 29 columns
-    // 100px fixed width
-    // pre-determined sprite Index (i will be sad later)
-    if (skillObject && skillObject.spriteIndex >= 0) {
-      const spriteIndex = skillObject.spriteIndex
-      const offsetX = spriteIndex % 20
-      const offsetY = Math.floor(spriteIndex / 20)
-      let style = {
-        backgroundImage: `url(${spriteSheet})`,
-        backgroundPosition: `-${offsetX*iconSize}px -${offsetY*iconSize}px`,
-        width: `${iconSize}px`,
-        height: `${iconSize}px`
-      };
-      return style
-    } else {
-      return null
-    }
-  }
 
   const renderSkillsInTree = () => {
     if (!skills || !skillTree) {
@@ -42,12 +25,24 @@ function Job({data: jobData, skillLevels, setSkills, spriteSheet}) {
     } else {
       const skillTreeItems = skillTree.map(skillId => {
         if (skillId > 0) {
-          const skillObject = skills.find(obj => obj.id === skillId)
+          const currentLevel = skillLevels[skillId] ? skillLevels[skillId] : 0
+          const skillObject = skills[skillId]
+          const nextSkillExists = skillObject.nextId ? skills[skillObject.nextId] : null
+          const prevSkillExists = skillObject.prevId ? skills[skillObject.prevId] : null
           return <Skill
-            data={skillObject} 
+            name={skillObject.name}
+            max={skillObject.max}
+            currentLevel={currentLevel}
+            // filter out hanging references from shared skills
+            nextId={nextSkillExists ? skillObject.nextId : null}
+            nextLevel={nextSkillExists ? skillObject.nextLevel : null}
+            nextLevelCurrent={nextSkillExists ? skillLevels[skillObject.nextId]: null}
+            prevId={prevSkillExists ? skillObject.prevId : null} 
+            prevLevel={prevSkillExists ? skillObject.prevLevel : null}
+            prevLevelCurrent={prevSkillExists ? skillLevels[skillObject.prevId]: null}
+            spriteIndex={skillObject.spriteIndex}
             skillLevelData={skillLevels}
-            updateSkill={modifySpecificSkill(skillObject)}
-            iconStyle={renderSprite(skillId, skillObject)}
+            updateSkill={modifySpecificSkill(skillId, skillObject.max)}
           />
         } else if (skillId < 0) {
           if (skillId === -2) {
@@ -58,7 +53,7 @@ function Job({data: jobData, skillLevels, setSkills, spriteSheet}) {
             return <div className="Job-spacer"><hr/></div>
           }
         } else {
-          return <div className="Job-spacer"></div>
+          return <div className="Job-spacer"/>
         }
       })
       return <div className="Job-skillGrid">{skillTreeItems}</div>

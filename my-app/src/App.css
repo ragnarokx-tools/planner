@@ -1,21 +1,18 @@
 .App {
   text-align: center;
   align-content: top;
-  max-width: 688px;
-  margin-left: auto;
-  margin-right: auto;
-  height: 100vh;
+  height: 100%;
+  width:100%;
+  display: flex;
+  flex-direction:column;
 }
 
 .App-header {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  padding-left: 3%;
-  padding-right: 3%;
-  width: min-content;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  width: 100%;
   background-color: white;
   border: black 1px solid;
   height: min-content;
@@ -28,8 +25,46 @@
 }
 
 .App-jobContent {
-  margin-top: calc(max(6vh, 6vmin));
+  max-width: 688px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 4vmin;
   padding-bottom: 4vmin;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.App-skillSummary {
+  display: flex;
+  flex-direction: column;
+}
+
+.App-miniIcon {
+  transform: scale(0.25);
+  transform-origin: left top;
+  max-height: 25px;
+  aspect-ratio: 1;
+}
+
+.App-summaryLevel {
+  margin-left: 4px;
+}
+
+.App-summaryLine {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  margin-left: 10%;
+}
+
+.App-skillSummaryControls {
+
+}
+
+.App-skillSummaryList {
+  display: flex;
+  flex-direction: column;
+  transition: height 0.5s;
 }
 
 .App-jobName select {

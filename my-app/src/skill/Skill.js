@@ -1,36 +1,36 @@
 import './Skill.css';
+import '../skillsprite/SkillSprite';
+import SkillSprite from '../skillsprite/SkillSprite';
 
-function Skill({ data: skillData, skillLevelData, updateSkill, iconStyle }) {
+function Skill({ 
+  name: skillName, 
+  max, 
+  currentLevel,
+  nextId, 
+  nextLevel, 
+  nextLevelCurrent,
+  prevId, 
+  prevLevel,
+  prevLevelCurrent,
+  spriteIndex,
+  updateSkill
+}) {
 
-  if (!skillData) {
-    return <div>no data found for skill</div>
-  }
-
-  const {
-    id, 
-    name: skillName, 
-    max, 
-    nextId, 
-    nextLevel, 
-    prevId, 
-    prevLevel
-  } = skillData;
-  const currentValue = skillLevelData[id] ? skillLevelData[id] : 0
   let incrementButton, decrementButton;
 
   const handleIncrement = (increment) => {
     return () => {
-      if (!currentValue) {
+      if (!currentLevel) {
         updateSkill(increment)
       } else {
-        updateSkill(currentValue + increment)
+        updateSkill(currentLevel + increment)
       }
     }
   }
 
   const canIncrease = () => {
     if (prevId) {
-      return (skillLevelData[prevId] && skillLevelData[prevId] >= prevLevel)
+      return (prevLevelCurrent >= prevLevel)
     } else {
         return true
     }
@@ -38,8 +38,8 @@ function Skill({ data: skillData, skillLevelData, updateSkill, iconStyle }) {
 
   const canDecrease = () => {
     if (nextId) {
-      if (skillLevelData[nextId]) {
-        return (skillLevelData[nextId] > 0 && currentValue > nextLevel)
+      if (nextLevelCurrent) {
+        return (nextLevelCurrent > 0 && currentLevel > nextLevel)
       } else {
         return true
       }
@@ -48,44 +48,44 @@ function Skill({ data: skillData, skillLevelData, updateSkill, iconStyle }) {
     }
   }
 
-  if (currentValue < max && canIncrease()) {
+  if (currentLevel < max && canIncrease()) {
     incrementButton = <span className="Skill-button" rel="button" onClick={handleIncrement(1)}>+</span>
   } else {
     incrementButton = <span className="Skill-button Skill-buttonDisabled" rel="button">+</span>
   }
 
-  if (currentValue > 0 && canDecrease()) {
+  if (currentLevel > 0 && canDecrease()) {
     decrementButton = <span className="Skill-button" rel="button" onClick={handleIncrement(-1)}>-</span>
   } else {
     decrementButton = <span className="Skill-button Skill-buttonDisabled" rel="button">-</span>
   }
 
-  const skillIcon = () => {
-    let newStyle = {
-      ...iconStyle 
+  const skillSpacer = () => {
+    const isOver = currentLevel >= nextLevel ? {
+      fontWeight: "bold",
+      color: "green"
+    } : {
+      color: "grey"
     }
-    let filter = "grayscale(100%)"
-    if (canIncrease()) {
-      filter = ""
+    if (nextId) {
+      return <div className="Skill-connector" style={isOver}>Lv.{nextLevel}</div>
+    } else {
+      return <div className="Skill-spacer"></div>
     }
-    newStyle["filter"] = filter
-    return <div 
-      className="Skill-icon"
-      style={newStyle}
-    ></div>
   }
 
   return (
     <div className="Skill">
-        {skillIcon()}
+        <SkillSprite spriteIndex={spriteIndex} isDisabled={!canIncrease()}/>
         <div className="Skill-details">
             <div className="Skill-name">{skillName}</div>
             <div className="Skill-modifiers">
                 {decrementButton}
-                <div className="Skill-value">{currentValue}/{max}</div>
+                <div className="Skill-value">{currentLevel}/{max}</div>
                 {incrementButton}
             </div>
         </div>
+        {skillSpacer()}
     </div>
   );
 }
