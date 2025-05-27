@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import jobData from './resources/jobs.json'
 import skillData from './resources/skills.json'
-import Job from './job/Job.js';
+import Job from './components/job/Job.js';
 import skillSprites from './icons/all_skills_global.png'
 import { Buffer } from 'buffer';
 import { useLocation, matchPath, useNavigate } from 'react-router-dom';
 import ReactGA from "react-ga4";
-
+import GitHubButton from 'react-github-btn'
 
 function App() {
   const location = useLocation();
@@ -81,7 +81,7 @@ function App() {
       action: "Save",
       label: "Attempted"
     });
-    const skillLevelsClean =  Object.fromEntries(
+    const skillLevelsClean = Object.fromEntries(
       Object.entries(skillLevels).filter(([key, value]) => value !== 0)
     )
     const packed = JSON.stringify({
@@ -144,13 +144,23 @@ function App() {
   // join the job skillTree with the skill data
   const getJobDataById = () => {
     const jobObject = jobList.find(job => job.id === jobId)
+    const skillsById = getSkillsByJob()
+    return {...jobObject, "skills": skillsById}
+  }
+
+  const getSkillsByJob = () => {
+    const jobObject = jobList.find(job => job.id === jobId)
     const skillTree = jobObject.skillTree
+    let skills = {}
     if (skillTree) {
-      const skills = skillData.filter((skill) => skillTree.some((skillId) => skillId === skill.id))
-      return {...jobObject, "skills": skills}
-    } else {
-      return jobObject
+      skillData.forEach((skill) => {
+        if (skillTree.some((skillId) => skillId === skill.id)) {
+          const {id: skillId, ...skillRest} = skill
+          skills[skill.id] = skillRest
+        }
+      })
     }
+    return skills
   }
 
   if (!jobData) {
@@ -182,7 +192,7 @@ function App() {
     return <div className="App-totalJobPoints">{sum}/170{advisory}</div>
   }
 
-  const jobSelector = () => {
+  const renderJobSelector = () => {
     return (
     <select name="job" value={jobId} onChange={onChangeJobHandler}>
       {jobList.map((job) => <option key={job.id} value={job.id}>{job.name}</option>)}
@@ -193,16 +203,20 @@ function App() {
   const header = () => {
     return (
       <div className="App-header">
-        <div className="App-jobName">{jobSelector()}</div>
+        <div className="App-jobName">{renderJobSelector()}</div>
         {renderTotalSkillPointsUsed()}
         <div className="App-jobButtons">
           {renderSaveButton()}{renderResetButton()}
         </div>
+        {/* not quite ready yet but kinda works.
+         <SkillSummary 
+          skillLevels={skillLevels}
+          skillsByJob={getSkillsByJob()}
+          /> */}
         {copySuccess ? 
           <div className="App-copiedUrl" style={{height: "24px"}}>{copySuccess}</div> :
           <div className="App-copiedUrl" style={{height: "0px"}}></div>
         }
-       
       </div>
     )
   }
@@ -218,6 +232,12 @@ function App() {
           setSkills={setSkills}
           spriteSheet={skillSprites}
         /> : null }
+      </div>
+      <div className="App-footer">
+        <GitHubButton href="https://github.com/ragnarokx-tools/planner" data-color-scheme="no-preference: light; light: light; dark: dark;" aria-label="Follow @ragnarokx-tools/planner on GitHub">Follow @ragnarokx-tools/planner</GitHubButton>
+        <a href='https://ko-fi.com/H2H51F455H' target='_blank' rel="noreferrer">
+          <img height='36' style={{border:"0px",height:"36px"}} src='https://storage.ko-fi.com/cdn/kofi5.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' />
+        </a>
       </div>
     </div>
   );

@@ -40,7 +40,3 @@
   font-size: calc(min(10px + 2vmin, 18px));
   font-weight: bold;
 }
-
-.Job-totalPoints {
-  font-size: calc(min(10px + 2vmin, 18px));
-}
