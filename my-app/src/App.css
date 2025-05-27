@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  align-content: top;
   height: 100%;
   width:100%;
   display: flex;
@@ -31,40 +30,8 @@
   padding-top: 4vmin;
   padding-bottom: 4vmin;
   overflow-y: auto;
+  overflow-x: hidden;
   flex-grow: 1;
-}
-
-.App-skillSummary {
-  display: flex;
-  flex-direction: column;
-}
-
-.App-miniIcon {
-  transform: scale(0.25);
-  transform-origin: left top;
-  max-height: 25px;
-  aspect-ratio: 1;
-}
-
-.App-summaryLevel {
-  margin-left: 4px;
-}
-
-.App-summaryLine {
-  display: flex;
-  align-items: left;
-  justify-content: left;
-  margin-left: 10%;
-}
-
-.App-skillSummaryControls {
-
-}
-
-.App-skillSummaryList {
-  display: flex;
-  flex-direction: column;
-  transition: height 0.5s;
 }
 
 .App-jobName select {
@@ -88,4 +55,10 @@
   margin: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+}
+
+.App-footer {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
 }

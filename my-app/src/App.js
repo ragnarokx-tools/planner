@@ -2,13 +2,12 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import jobData from './resources/jobs.json'
 import skillData from './resources/skills.json'
-import Job from './job/Job.js';
+import Job from './components/job/Job.js';
 import skillSprites from './icons/all_skills_global.png'
 import { Buffer } from 'buffer';
 import { useLocation, matchPath, useNavigate } from 'react-router-dom';
 import ReactGA from "react-ga4";
-import SkillSprite from './skillsprite/SkillSprite.js';
-
+import GitHubButton from 'react-github-btn'
 
 function App() {
   const location = useLocation();
@@ -17,7 +16,6 @@ function App() {
   const [jobId, setJob] = useState(1);
   const [skillLevels, setSkills] = useState({});
   const [copySuccess, setCopySuccess] = useState('');
-  const [showSummary, setSummaryVisible] = useState(false);
 
   useEffect(() => {
     try {
@@ -194,48 +192,6 @@ function App() {
     return <div className="App-totalJobPoints">{sum}/170{advisory}</div>
   }
 
-  const onToggleSummary = () => {
-    setSummaryVisible(!showSummary)
-  }
-
-  const renderSkillSummary = () => {
-    let summary;
-    try {
-      if (skillLevels) {
-        const skillsByJob = getSkillsByJob()
-        summary = Object.entries(skillLevels).map(
-          ([skillId, skillLevel], _) => {
-            if (skillLevel > 0) {
-              const foundSkill = skillsByJob[skillId]
-              const {name, max, spriteIndex} = foundSkill
-              return <div className="App-summaryLine">
-                  <div className="App-miniIcon">
-                    <SkillSprite spriteIndex={spriteIndex}/>
-                  </div>
-                  <div className="App-summaryLevel">
-                    {name}: {skillLevel}/{max}
-                  </div>
-                </div>
-            } else {
-              return null
-            }
-        })
-      }
-    } catch {
-      console.log("unable to render summary")
-    }
-
-    let showHideSummary = showSummary ? "hide summary" : "show summary"
-    let maybeStyle = showSummary ? {} : {display: "none"}
-
-    return <div className="App-skillSummary">
-      <div className="App-skillSummaryControls">
-        <button onClick={onToggleSummary}>{showHideSummary}</button>
-      </div>
-      <div className="App-skillSummaryList" style={maybeStyle}>{summary}</div>
-    </div>
-  }
-
   const renderJobSelector = () => {
     return (
     <select name="job" value={jobId} onChange={onChangeJobHandler}>
@@ -252,12 +208,15 @@ function App() {
         <div className="App-jobButtons">
           {renderSaveButton()}{renderResetButton()}
         </div>
-        {renderSkillSummary()}
+        {/* not quite ready yet but kinda works.
+         <SkillSummary 
+          skillLevels={skillLevels}
+          skillsByJob={getSkillsByJob()}
+          /> */}
         {copySuccess ? 
           <div className="App-copiedUrl" style={{height: "24px"}}>{copySuccess}</div> :
           <div className="App-copiedUrl" style={{height: "0px"}}></div>
         }
-       
       </div>
     )
   }
@@ -273,6 +232,12 @@ function App() {
           setSkills={setSkills}
           spriteSheet={skillSprites}
         /> : null }
+      </div>
+      <div className="App-footer">
+        <GitHubButton href="https://github.com/ragnarokx-tools/planner" data-color-scheme="no-preference: light; light: light; dark: dark;" aria-label="Follow @ragnarokx-tools/planner on GitHub">Follow @ragnarokx-tools/planner</GitHubButton>
+        <a href='https://ko-fi.com/H2H51F455H' target='_blank' rel="noreferrer">
+          <img height='36' style={{border:"0px",height:"36px"}} src='https://storage.ko-fi.com/cdn/kofi5.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' />
+        </a>
       </div>
     </div>
   );

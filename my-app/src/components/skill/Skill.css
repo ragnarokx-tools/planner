@@ -47,6 +47,7 @@
   width: calc(min(8px + 4vmin, 32px));
   aspect-ratio: 1;
   border: solid 1px black;
+  border-radius: 8px;
   cursor: pointer;
   background-color: lightblue;
   touch-action: manipulation;

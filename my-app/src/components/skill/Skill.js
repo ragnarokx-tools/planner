@@ -1,5 +1,4 @@
 import './Skill.css';
-import '../skillsprite/SkillSprite';
 import SkillSprite from '../skillsprite/SkillSprite';
 
 function Skill({ 

@@ -1,4 +1,4 @@
-import skillSprites from '../icons/all_skills_global.png'
+import skillSprites from '../../icons/all_skills_global.png'
 
 const iconSize = 100
 const columnSize = 20

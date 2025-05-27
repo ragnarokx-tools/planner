@@ -7,7 +7,6 @@ function Job({data: jobData, skillLevels, setSkills}) {
 
   const modifySpecificSkill = (skillId, max) => 
     (newValue) => setSkills(prevSkills => {
-      // const {id: skillId, max} = skillObject
       let {[skillId]: _, ...rest} = prevSkills
       if (newValue <= 0) {
         return rest
