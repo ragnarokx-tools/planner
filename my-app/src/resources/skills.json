@@ -42,7 +42,7 @@
   {
     "id": 1004,
     "name": "Endure",
-    "max": 10,
+    "max": 5,
     "nextId": 1010,
     "nextLevel": 3,
     "prevId": 1003,

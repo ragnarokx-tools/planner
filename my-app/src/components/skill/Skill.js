@@ -69,7 +69,7 @@ function Skill({
     if (nextId) {
       return <div className="Skill-connector" style={isOver}>Lv.{nextLevel}</div>
     } else {
-      return <div className="Skill-spacer"></div>
+      return <div className="Skill-spacer"/>
     }
   }
 
