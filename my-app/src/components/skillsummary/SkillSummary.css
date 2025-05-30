@@ -21,10 +21,6 @@
   margin-left: 10%;
 }
 
-.SkillSummary-controls {
-
-}
-
 .SkillSummary-list {
   display: flex;
   flex-direction: column;

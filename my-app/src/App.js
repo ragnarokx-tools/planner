@@ -215,7 +215,7 @@ function App() {
           /> */}
         {copySuccess ? 
           <div className="App-copiedUrl" style={{height: "24px"}}>{copySuccess}</div> :
-          <div className="App-copiedUrl" style={{height: "0px"}}></div>
+          <div className="App-copiedUrl" style={{height: "0px"}}/>
         }
       </div>
     )

@@ -12,7 +12,6 @@ function SkillSummary({skillLevels, skillsByJob}) {
   let summary;
   try {
     if (skillLevels) {
-    //const skillsByJob = getSkillsByJob()
     summary = Object.entries(skillLevels).map(
       ([skillId, skillLevel], _) => {
       if (skillLevel > 0) {
