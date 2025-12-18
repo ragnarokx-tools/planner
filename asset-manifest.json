@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/planner/static/css/main.1aae0f60.css",
+    "main.js": "/planner/static/js/main.89400a87.js",
+    "static/js/453.17b95b5a.chunk.js": "/planner/static/js/453.17b95b5a.chunk.js",
+    "static/media/all_skills_global.png": "/planner/static/media/all_skills_global.4811cb52db661e9de212.png",
+    "index.html": "/planner/index.html",
+    "main.1aae0f60.css.map": "/planner/static/css/main.1aae0f60.css.map",
+    "main.89400a87.js.map": "/planner/static/js/main.89400a87.js.map",
+    "453.17b95b5a.chunk.js.map": "/planner/static/js/453.17b95b5a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1aae0f60.css",
+    "static/js/main.89400a87.js"
+  ]
+}
