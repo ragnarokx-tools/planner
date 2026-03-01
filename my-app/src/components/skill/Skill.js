@@ -59,12 +59,9 @@ function Skill({
     }
 
     const isOver = currentLevel >= nextLevel;
-    const style = {
-      fontWeight: isOver ? "bold" : "normal",
-      color: isOver ? "green" : "grey"
-    };
+    const className = `Skill-connector ${isOver ? 'is-met' : ''}`;
 
-    return <div className="Skill-connector" style={style}>Lv.{nextLevel}</div>;
+    return <div className={className} data-level={`Lv.${nextLevel}`} />;
   };
 
   return (
