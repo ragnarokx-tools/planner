@@ -3,73 +3,128 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  gap: var(--space-sm);
 }
 
 .Skill-details {
   display: flex;
-  flex-direction:column;
-  margin-left:5%;
-  margin-right:5%;
-  text-align: center;
-  flex: 1;
+  flex-direction: column;
+  gap: var(--space-sm);
+  width: 100%;
 }
 
 .Skill-name {
-  font-size: calc(min(8px + 2vmin, 16px));
-  margin: auto;
-  margin-top: 1vmin;
-  margin-bottom: 1vmin;
-  text-align: center;
-  width: 15vmin;
-  max-width: 100px;
-  flex: 1;
-}
-
-.Skill-value {
-  font-size: calc(min(8px + 2vmin, 16px));
-  font-weight: bold;
-  text-align: center;
-  padding-left: calc(min(2vmin, 8px));
-  padding-right: calc(min(2vmin, 8px));
+  font-size: var(--font-md);
+  font-weight: var(--font-medium);
+  color: var(--color-text-primary);
+  min-height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.3;
 }
 
 .Skill-modifiers {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: var(--space-sm);
 }
 
-.Skill-modifiers .Skill-button {
-  text-align: center;
+.Skill-value {
+  font-size: var(--font-md);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-primary);
+  min-width: 3rem;
+}
+
+.Skill-button {
+  display: flex;
   align-items: center;
-  font-size: calc(8px + 2vmin);
-  font-weight: bold;
-  width: calc(min(8px + 4vmin, 32px));
-  aspect-ratio: 1;
-  border: solid 1px black;
-  border-radius: 8px;
+  justify-content: center;
+  width: var(--skill-button-size);
+  height: var(--skill-button-size);
+  font-size: var(--font-lg);
+  font-weight: var(--font-bold);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
   cursor: pointer;
-  background-color: lightblue;
+  background-color: var(--color-primary);
+  color: white;
+  transition: all var(--transition-fast);
   touch-action: manipulation;
+  padding: 0;
 }
 
-.Skill-button.Skill-buttonDisabled {
-  background-color: lightgrey;
-  cursor: unset;
+.Skill-button:hover:not(:disabled) {
+  background-color: var(--color-primary-hover);
+  transform: scale(1.05);
+}
+
+.Skill-button:active:not(:disabled) {
+  background-color: var(--color-primary-active);
+  transform: scale(0.95);
+}
+
+.Skill-button:disabled {
+  background-color: var(--color-button-disabled);
+  color: var(--color-button-disabled-text);
+  border-color: var(--color-border);
+  cursor: not-allowed;
+  transform: none;
 }
 
 .Skill-spacer {
-  min-height: 4vh;
+  min-height: var(--space-2xl);
   width: 100%;
 }
 
 .Skill-connector {
-  min-height: 4vh;
+  min-height: var(--space-2xl);
   width: 100%;
-  background-image: linear-gradient(#000, #000);
-  background-size: 2px 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  text-align: right;
-  padding-right: 6vmin;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-md);
+  font-weight: var(--font-bold);
+  color: var(--color-text-secondary);
+}
+
+.Skill-connector.is-met {
+  color: var(--color-success);
+}
+
+.Skill-connector::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background-color: var(--color-text-secondary);
+  transform: translateX(-50%);
+}
+
+.Skill-connector.is-met::before {
+  background-color: var(--color-success);
+}
+
+.Skill-connector::after {
+  content: attr(data-level);
+  position: absolute;
+  left: calc(50% + var(--space-sm));
+  z-index: 1;
+}
+
+/* Mobile responsive */
+@media (max-width: 640px) {
+  .Skill-name {
+    font-size: var(--font-xs);
+    min-height: 2rem;
+  }
+  
+  .Skill-connector {
+    padding-right: var(--space-lg);
+  }
 }

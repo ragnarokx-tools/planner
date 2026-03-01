@@ -1,242 +1,126 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import './App.css';
-import jobData from './resources/jobs.json'
-import skillData from './resources/skills.json'
 import Job from './components/job/Job.js';
-import skillSprites from './icons/all_skills_global.png'
-import { Buffer } from 'buffer';
-import { useLocation, matchPath, useNavigate } from 'react-router-dom';
+import SkillSummary from './components/skillsummary/SkillSummary.js';
+import { useNavigate } from 'react-router-dom';
 import ReactGA from "react-ga4";
-import GitHubButton from 'react-github-btn'
+import GitHubButton from 'react-github-btn';
+import { useSkillPlanner } from './hooks/useSkillPlanner';
+import { useUrlSync } from './hooks/useUrlSync';
+import { useTheme } from './hooks/useTheme';
 
 function App() {
-  const location = useLocation();
   const navigate = useNavigate();
-  const currentHash = location.pathname;
-  const [jobId, setJob] = useState(1);
-  const [skillLevels, setSkills] = useState({});
-  const [copySuccess, setCopySuccess] = useState('');
+  const skillPlanner = useSkillPlanner();
+  const { saveBuild } = useUrlSync(skillPlanner);
+  const { theme, toggleTheme } = useTheme();
 
+  // Initialize Google Analytics
   useEffect(() => {
+    // Skip initialization in development
+    if (import.meta.env.DEV) {
+      return;
+    }
+
     try {
-      setTimeout(_ => {
+      setTimeout(() => {
         ReactGA.initialize("G-10CRLLHRXZ");
-        ReactGA.send({ hitType: "pageview", page: currentHash });
-      }, 4000)
-      } catch(err) {
-      console.log(err)
+        ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+      }, 4000);
+    } catch (err) {
+      console.error('Failed to initialize Google Analytics:', err);
     }
-  }, [])
+  }, []);
 
-  useEffect(() => {
-    // Just unga bunga fix this condition on load
-    if (window.location.pathname === '/planner' || window.location.pathname === '/planner#') {
-      window.location.pathname = '/planner/'
-    } else if (currentHash) {
-      ReactGA.event({
-        category: "Builds",
-        action: "Load Path",
-        label: currentHash
-      });
-      const isShaPath = matchPath("/:encoded", currentHash)
-      if (isShaPath) {
-        try {
-          const sha = isShaPath.params.encoded
-          const unpackedString = Buffer.from(sha, 'base64').toString('ascii');
-          const parsed = JSON.parse(unpackedString)
-          if (parsed) {
-            setJob(parsed.jobId)
-            setSkills(parsed.skillLevels)
-            if (!copySuccess) {
-              setCopySuccess('Imported!');
-              setTimeout(() => {
-                setCopySuccess('');
-              }, 2000); // Reset message after 2 seconds
-            }
-            ReactGA.event({
-              category: "Builds",
-              action: "Load",
-              label: "Success", // optional
-              value: parsed.jobId // optional, must be a number
-            });
-          }
-        } catch {
-          console.log("redirecting due to unparsed build")
-          // just give up
-          navigate('/', { replace: true })
-          ReactGA.event({
-            category: "Builds",
-            action: "Load",
-            label: "Failure"
-          });
-        }
-      }
+  const handleJobChange = (event) => {
+    const newJobId = parseInt(event.target.value);
+    const hasSkills = Object.keys(skillPlanner.skillLevels).length > 0;
+    
+    if (hasSkills && !window.confirm("Changing job will reset all skills. Continue?")) {
+      return;
     }
-  }, [currentHash, location, navigate])
-  // Only depend on the path changing. Everything else is fine.
-
-  const handlePackData = async () => {
-    ReactGA.event({
-      category: "Builds",
-      action: "Save",
-      label: "Attempted"
-    });
-    const skillLevelsClean = Object.fromEntries(
-      Object.entries(skillLevels).filter(([key, value]) => value !== 0)
-    )
-    const packed = JSON.stringify({
-      "jobId": jobId,
-      "skillLevels": skillLevelsClean
-    })
-
-    const base64String = Buffer.from(packed).toString('base64');
-
-    if (base64String) {
-      // navigate first
-      navigate(`/${base64String}`, { replace: true });
-      // Copy to clipboard
-      try {
-        await navigator.clipboard.writeText(window.location.href);
-        setCopySuccess('URL Copied!');
-        setTimeout(() => {
-          setCopySuccess('');
-        }, 2000); // Reset message after 2 seconds
-        ReactGA.event({
-          category: "Builds",
-          action: "Save",
-          label: "Success",
-          value: jobId
-        });
-      } catch (err) {
-        setCopySuccess('Failed to copy URL');
-      }
-    }
-  }
-
-  const jobList = jobData.jobs
-
-  const onChangeJobHandler = (event) => {
-    const jobId = parseInt(event.target.value);
-    if (Object.keys(skillLevels).length !== 0) {
-        if (window.confirm("Changing job will reset all skills. Continue?")) {
-          setSkills({})
-          setJob(jobId)
-          navigate('/', { replace: true });
-          window.scrollTo({ top: 0, left: 0})
-        }
-      } else {
-        setSkills({})
-        setJob(jobId)
-        navigate('/', { replace: true });
-        window.scrollTo({ top: 0, left: 0})
-      }
-  }
+    
+    skillPlanner.setJob(newJobId);
+    navigate('/', { replace: true });
+    window.scrollTo({ top: 0, left: 0 });
+  };
   
   const handleResetSkills = () => {
     if (window.confirm("Are you sure you want to reset all skills?")) {
-      // Proceed with submission
-      setSkills({})
+      skillPlanner.resetSkills();
       navigate('/', { replace: true });
-    } else {
-    }  
-  }
-
-  // join the job skillTree with the skill data
-  const getJobDataById = () => {
-    const jobObject = jobList.find(job => job.id === jobId)
-    const skillsById = getSkillsByJob()
-    return {...jobObject, "skills": skillsById}
-  }
-
-  const getSkillsByJob = () => {
-    const jobObject = jobList.find(job => job.id === jobId)
-    const skillTree = jobObject.skillTree
-    let skills = {}
-    if (skillTree) {
-      skillData.forEach((skill) => {
-        if (skillTree.some((skillId) => skillId === skill.id)) {
-          const {id: skillId, ...skillRest} = skill
-          skills[skill.id] = skillRest
-        }
-      })
     }
-    return skills
-  }
+  };
 
-  if (!jobData) {
-    return <div>Loading static data... Try reloading if it doesn't work.</div>
-  }
-  
-  const renderSaveButton = () => {
-    return <button onClick={handlePackData}>save</button>
-  }
-
-  const renderResetButton = () => {
-    return <button onClick={handleResetSkills}>reset</button>
-  }
-
-  /* 
-    Renders a display of total skill points
-  */
-  const renderTotalSkillPointsUsed = () => {
-    let sum = 0;
-    if(skillLevels) {
-      Object.values(skillLevels).map((level) => 
-        sum += level
-      )
-    }
-    let advisory;
-    if (sum > 170) {
-      advisory = <div className="App-jobWarning">warning: exceeds possible job levels</div>
-    }
-    return <div className="App-totalJobPoints">{sum}/170{advisory}</div>
-  }
-
-  const renderJobSelector = () => {
-    return (
-    <select name="job" value={jobId} onChange={onChangeJobHandler}>
-      {jobList.map((job) => <option key={job.id} value={job.id}>{job.name}</option>)}
-    </select>
-    )
-  }
-
-  const header = () => {
-    return (
-      <div className="App-header">
-        <div className="App-jobName">{renderJobSelector()}</div>
-        {renderTotalSkillPointsUsed()}
-        <div className="App-jobButtons">
-          {renderSaveButton()}{renderResetButton()}
-        </div>
-        {/* not quite ready yet but kinda works.
-         <SkillSummary 
-          skillLevels={skillLevels}
-          skillsByJob={getSkillsByJob()}
-          /> */}
-        {copySuccess ? 
-          <div className="App-copiedUrl" style={{height: "24px"}}>{copySuccess}</div> :
-          <div className="App-copiedUrl" style={{height: "0px"}}/>
-        }
-      </div>
-    )
-  }
+  const isOverLimit = skillPlanner.totalSkillPoints > 170;
 
   return (
     <div className="App">
-      {header()}
-      <div className="App-jobContent">
-      { jobId ?  
-        <Job 
-          data={getJobDataById()}
-          skillLevels={skillLevels}
-          setSkills={setSkills}
-          spriteSheet={skillSprites}
-        /> : null }
+      <div className="App-header">
+        <div className="App-jobName">
+          <select name="job" value={skillPlanner.jobId} onChange={handleJobChange}>
+            {skillPlanner.jobList.map((job) => (
+              <option key={job.id} value={job.id}>{job.name}</option>
+            ))}
+          </select>
+        </div>
+        
+        <div className="App-totalJobPoints">
+          {skillPlanner.totalSkillPoints}/170
+          {isOverLimit && (
+            <div className="App-jobWarning">warning: exceeds possible job levels</div>
+          )}
+        </div>
+        
+        <div className="App-jobButtons">
+          <button onClick={saveBuild}>save</button>
+          <button onClick={handleResetSkills}>reset</button>
+        </div>
+        
+        <div className="App-secondaryButtons">
+          <SkillSummary 
+            skillLevels={skillPlanner.skillLevels}
+            skills={skillPlanner.currentSkills}
+            onSaveBuild={saveBuild}
+            totalSkillPoints={skillPlanner.totalSkillPoints}
+            jobName={skillPlanner.currentJob?.name}
+          />
+          <button onClick={toggleTheme} title="Toggle theme">
+            {theme === 'light' ? '🌙' : '☀️'}
+          </button>
+        </div>
+        
+        {skillPlanner.copySuccess && (
+          <div className="App-copiedUrl" style={{ height: "24px" }}>
+            {skillPlanner.copySuccess}
+          </div>
+        )}
       </div>
+
+      <div className="App-jobContent">
+        <Job 
+          data={skillPlanner.jobWithSkills}
+          skillLevels={skillPlanner.skillLevels}
+          setSkillLevel={skillPlanner.setSkillLevel}
+        />
+      </div>
+
       <div className="App-footer">
-        <GitHubButton href="https://github.com/ragnarokx-tools/planner" data-color-scheme="no-preference: light; light: light; dark: dark;" aria-label="Follow @ragnarokx-tools/planner on GitHub">Follow @ragnarokx-tools/planner</GitHubButton>
+        <GitHubButton 
+          href="https://github.com/ragnarokx-tools/planner" 
+          data-color-scheme="no-preference: light; light: light; dark: dark;" 
+          aria-label="Follow @ragnarokx-tools/planner on GitHub"
+        >
+          Follow @ragnarokx-tools/planner
+        </GitHubButton>
         <a href='https://ko-fi.com/H2H51F455H' target='_blank' rel="noreferrer">
-          <img height='36' style={{border:"0px",height:"36px"}} src='https://storage.ko-fi.com/cdn/kofi5.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' />
+          <img 
+            height='36' 
+            style={{ border: "0px", height: "36px" }} 
+            src='https://storage.ko-fi.com/cdn/kofi5.png?v=6' 
+            border='0' 
+            alt='Buy Me a Coffee at ko-fi.com' 
+          />
         </a>
       </div>
     </div>

@@ -1,6 +1,7 @@
 .SkillSprite {
-  max-width: 100px;
-  aspect-ratio: 1;
-  text-overflow: clip;
+  width: var(--skill-icon-size);
+  height: var(--skill-icon-size);
   overflow: hidden;
+  transition: filter var(--transition-base);
+  border-radius: var(--radius-sm);
 }

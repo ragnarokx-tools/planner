@@ -1,82 +1,89 @@
 import Skill from "../skill/Skill.js"
 import "./job.css"
 
-function Job({data: jobData, skillLevels, setSkills}) {
+const SKILL_TREE_TYPES = {
+  SPACER: 0,
+  SPACER_HR: -1,
+  CONNECTOR: -2,
+  CONNECTOR_HR: -3
+};
+
+const COLUMNS_COUNT = 3;
+
+function Job({data: jobData, skillLevels, setSkillLevel}) {
 
   const {name, skillTree, skills} = jobData
 
-  const modifySpecificSkill = (skillId, max) => 
-    (newValue) => setSkills(prevSkills => {
-      let {[skillId]: _, ...rest} = prevSkills
-      if (newValue <= 0) {
-        return rest
-      } else {
-        return {
-          ...rest,
-          [skillId]: Math.max(Math.min(max, newValue),0),
-        }
-      }
-    })
+  const handleSkillUpdate = (skillId, max) => (newValue) => {
+    setSkillLevel(skillId, newValue, max);
+  };
 
   const renderSkillsInTree = () => {
     if (!skills || !skillTree) {
-      return <div>couldn't find skills</div>
-    } else {
-      const skillTreeItems = skillTree.map(skillId => {
-        if (skillId > 0) {
-          const currentLevel = skillLevels[skillId] ? skillLevels[skillId] : 0
-          const skillObject = skills[skillId]
-          const nextSkillExists = skillObject.nextId ? skills[skillObject.nextId] : null
-          const prevSkillExists = skillObject.prevId ? skills[skillObject.prevId] : null
-          return <Skill
+      return <div>couldn't find skills</div>;
+    }
+
+    const highlightColumns = Array(COLUMNS_COUNT).fill(false);
+    let currentColumn = 0;
+
+    const renderSpacer = (type, index) => {
+      const isConnector = type === SKILL_TREE_TYPES.CONNECTOR || type === SKILL_TREE_TYPES.CONNECTOR_HR;
+      const hasHr = type === SKILL_TREE_TYPES.SPACER_HR || type === SKILL_TREE_TYPES.CONNECTOR_HR;
+      const baseClass = isConnector ? 'Job-connector' : 'Job-spacer';
+      const className = `${baseClass} ${highlightColumns[currentColumn] ? 'is-met' : ''}`;
+      const key = `${baseClass}-${hasHr ? 'hr-' : ''}${index}`;
+      
+      currentColumn = (currentColumn + 1) % COLUMNS_COUNT;
+      
+      return <div key={key} className={className}>{hasHr && <hr />}</div>;
+    };
+
+    const skillTreeItems = skillTree.map((skillId, index) => {
+      if (skillId > 0) {
+        const currentLevel = skillLevels[skillId] || 0;
+        const skillObject = skills[skillId];
+        const nextSkill = skillObject.nextId && skills[skillObject.nextId];
+        const prevSkill = skillObject.prevId && skills[skillObject.prevId];
+        
+        const meetsNextPrereq = nextSkill && currentLevel >= skillObject.nextLevel;
+        
+        const skillElement = (
+          <Skill
+            key={skillId}
             name={skillObject.name}
             max={skillObject.max}
             currentLevel={currentLevel}
-            // filter out hanging references from shared skills
-            nextId={nextSkillExists ? skillObject.nextId : null}
-            nextLevel={nextSkillExists ? skillObject.nextLevel : null}
-            nextLevelCurrent={nextSkillExists ? skillLevels[skillObject.nextId]: null}
-            prevId={prevSkillExists ? skillObject.prevId : null} 
-            prevLevel={prevSkillExists ? skillObject.prevLevel : null}
-            prevLevelCurrent={prevSkillExists ? skillLevels[skillObject.prevId]: null}
+            nextId={nextSkill ? skillObject.nextId : null}
+            nextLevel={nextSkill ? skillObject.nextLevel : null}
+            nextLevelCurrent={nextSkill ? skillLevels[skillObject.nextId] : null}
+            prevId={prevSkill ? skillObject.prevId : null} 
+            prevLevel={prevSkill ? skillObject.prevLevel : null}
+            prevLevelCurrent={prevSkill ? skillLevels[skillObject.prevId] : null}
             spriteIndex={skillObject.spriteIndex}
-            skillLevelData={skillLevels}
-            updateSkill={modifySpecificSkill(skillId, skillObject.max)}
+            updateSkill={handleSkillUpdate(skillId, skillObject.max)}
           />
-        } else if (skillId < 0) {
-          if (skillId === -2) {
-            return <div className="Job-connector"/>
-          } else if (skillId === -3) {
-            return <div className="Job-connector"><hr/></div>
-          } else if (skillId === -1) {
-            return <div className="Job-spacer"><hr/></div>
-          }
-        } else {
-          return <div className="Job-spacer"/>
-        }
-      })
-      return <div className="Job-skillGrid">{skillTreeItems}</div>
-    }
-  } 
-
-  if (!skills) {
-    return <div>no data for {name}</div>
-  }
-
-  const jobTitle = () => {
-    return <div className="Job-title">
-        {name}
-      </div>
-  }
+        );
+        
+        highlightColumns[currentColumn] = meetsNextPrereq;
+        currentColumn = (currentColumn + 1) % COLUMNS_COUNT;
+        
+        return skillElement;
+      }
+      
+      return renderSpacer(skillId, index);
+    });
+    
+    return <div className="Job-skillGrid">{skillTreeItems}</div>;
+  }; 
 
   return (
     <div className="Job">
       <div className="Job-header">
-        {jobTitle()}
+        <div className="Job-title">{name}</div>
       </div>
       {renderSkillsInTree()}
     </div>
-  )
+  );
 }
 
 export default Job;

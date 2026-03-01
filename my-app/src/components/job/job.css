@@ -2,41 +2,90 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.Job-spacer {
-  min-height: 4vh;
-}
-
-.Job-connector {
-  min-height: 4vh;
-  background-image: linear-gradient(#000, #000);
-  background-size: 2px 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  flex: 1;
-}
-
-.Job-skillTree {
-  width: min-content;
-}
-
-.Job .Job-skillGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 4vmin;
+  overflow: hidden; /* Prevent horizontal lines from causing overflow */
 }
 
 .Job-header {
-  margin-bottom: 4vmin;
+  margin-bottom: var(--space-2xl);
 }
 
 .Job-title {
-  font-weight: bold;
-  font-size: calc(min(18px + 2vmin, 36px))
+  font-weight: var(--font-bold);
+  font-size: var(--font-3xl);
+  color: var(--color-text-primary);
 }
 
-.Job-name {
-  font-size: calc(min(10px + 2vmin, 18px));
-  font-weight: bold;
+.Job-skillGrid {
+  display: grid;
+  grid-template-columns: repeat(var(--skill-grid-columns), 1fr);
+  column-gap: var(--skill-grid-gap);
+  row-gap: 0;
+  width: 100%;
+  position: relative;
+}
+
+.Job-spacer {
+  min-height: var(--space-2xl);
+  position: relative;
+}
+
+.Job-spacer hr {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  max-width: var(--max-width-content);
+  border: none;
+  border-top: 2px solid var(--color-text-secondary);
+  margin: 0;
+  pointer-events: none;
+}
+
+.Job-connector {
+  min-height: var(--space-2xl);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Job-connector::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background-color: var(--color-text-secondary);
+  transform: translateX(-50%);
+}
+
+.Job-connector.is-met::before {
+  background-color: var(--color-success) !important;
+}
+
+.Job-connector hr {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  max-width: var(--max-width-content);
+  border: none;
+  border-top: 2px solid var(--color-text-secondary);
+  margin: 0;
+  pointer-events: none;
+  z-index: var(--z-base);
+}
+
+/* Mobile responsive */
+@media (max-width: 640px) {
+  .Job-skillGrid {
+    column-gap: var(--space-md);
+  }
+  
+  .Job-title {
+    font-size: var(--font-2xl);
+  }
 }

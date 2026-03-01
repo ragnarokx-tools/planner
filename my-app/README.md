@@ -4,7 +4,7 @@ Just a small skill planner for Ragnarok X. Information based off of just scrapin
 
 This README covers the development details.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I had to migrate to Vite which I guess is working out great.
 
 # Major components
 
@@ -16,6 +16,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Skill
 `skill/Skill.js` represents one skill, and tracks whether it can be increased or decreased based on its dependencies.
+
+## SkillSummary.js
+`skillsummary/SkillSummary.js` renders a smaller summary of all the skills added. Sorry, no separation by job at the moment.
 
 # Data sources
 

@@ -1,0 +1,129 @@
+:root {
+  /* Colors */
+  --color-primary: #4A9FD8;
+  --color-primary-hover: #3B8FCC;
+  --color-primary-active: #2E8BC0;
+  
+  --color-success: #16a34a;
+  --color-warning: #ea580c;
+  --color-danger: #dc2626;
+  
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f1f5f9;
+  --color-bg-tertiary: #e2e8f0;
+  
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #475569;
+  --color-text-tertiary: #94a3b8;
+  
+  --color-border: #cbd5e1;
+  --color-border-hover: #94a3b8;
+  
+  --color-button-disabled: #e2e8f0;
+  --color-button-disabled-text: #94a3b8;
+  
+  /* Spacing - 8px base scale */
+  --space-xs: 0.25rem;   /* 4px */
+  --space-sm: 0.5rem;    /* 8px */
+  --space-md: 1rem;      /* 16px */
+  --space-lg: 1.5rem;    /* 24px */
+  --space-xl: 2rem;      /* 32px */
+  --space-2xl: 3rem;     /* 48px */
+  --space-3xl: 4rem;     /* 64px */
+  
+  /* Font sizes */
+  --font-xs: 0.75rem;    /* 12px */
+  --font-sm: 0.875rem;   /* 14px */
+  --font-md: 1rem;       /* 16px */
+  --font-lg: 1.125rem;   /* 18px */
+  --font-xl: 1.25rem;    /* 20px */
+  --font-2xl: 1.5rem;    /* 24px */
+  --font-3xl: 2rem;      /* 32px */
+  
+  /* Font weights */
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  
+  /* Border radius */
+  --radius-sm: 0.25rem;  /* 4px */
+  --radius-md: 0.5rem;   /* 8px */
+  --radius-lg: 0.75rem;  /* 12px */
+  --radius-full: 9999px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  
+  /* Transitions */
+  --transition-fast: 150ms ease-in-out;
+  --transition-base: 250ms ease-in-out;
+  --transition-slow: 350ms ease-in-out;
+  
+  /* Layout */
+  --max-width-content: 688px;
+  --header-height: 80px;
+  
+  /* Z-index scale */
+  --z-base: 1;
+  --z-dropdown: 10;
+  --z-sticky: 100;
+  --z-modal: 1000;
+  --z-tooltip: 2000;
+  
+  /* Skill specific */
+  --skill-icon-size: 100px;
+  --skill-button-size: 32px;
+  --skill-grid-columns: 3;
+  --skill-grid-gap: var(--space-lg);
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root:not(.light-theme) {
+    --color-bg-primary: #0f172a;
+    --color-bg-secondary: #1e293b;
+    --color-bg-tertiary: #334155;
+    
+    --color-text-primary: #f1f5f9;
+    --color-text-secondary: #cbd5e1;
+    --color-text-tertiary: #64748b;
+    
+    --color-border: #475569;
+    --color-border-hover: #64748b;
+    
+    --color-button-disabled: #334155;
+    --color-button-disabled-text: #64748b;
+  }
+}
+
+/* Manual dark mode override */
+:root.dark-theme {
+  --color-bg-primary: #0f172a;
+  --color-bg-secondary: #1e293b;
+  --color-bg-tertiary: #334155;
+  
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #cbd5e1;
+  --color-text-tertiary: #64748b;
+  
+  --color-border: #475569;
+  --color-border-hover: #64748b;
+  
+  --color-button-disabled: #334155;
+  --color-button-disabled-text: #64748b;
+}
+
+/* Mobile breakpoints */
+@media (max-width: 640px) {
+  :root {
+    --skill-icon-size: 80px;
+    --skill-button-size: 28px;
+    --skill-grid-gap: var(--space-md);
+    --font-md: 0.875rem;
+    --font-lg: 1rem;
+    --font-xl: 1.125rem;
+  }
+}
