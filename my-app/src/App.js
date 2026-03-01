@@ -17,8 +17,8 @@ function App() {
 
   // Initialize Google Analytics
   useEffect(() => {
-    // Only initialize in production
-    if (process.env.NODE_ENV !== 'production') {
+    // Skip initialization in development
+    if (import.meta.env.DEV) {
       return;
     }
 
