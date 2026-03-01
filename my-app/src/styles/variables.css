@@ -1,8 +1,8 @@
 :root {
   /* Colors */
-  --color-primary: #2563eb;
-  --color-primary-hover: #1d4ed8;
-  --color-primary-active: #1e40af;
+  --color-primary: #4A9FD8;
+  --color-primary-hover: #3B8FCC;
+  --color-primary-active: #2E8BC0;
   
   --color-success: #16a34a;
   --color-warning: #ea580c;
@@ -82,7 +82,7 @@
 
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not(.light-theme) {
     --color-bg-primary: #0f172a;
     --color-bg-secondary: #1e293b;
     --color-bg-tertiary: #334155;
@@ -97,6 +97,23 @@
     --color-button-disabled: #334155;
     --color-button-disabled-text: #64748b;
   }
+}
+
+/* Manual dark mode override */
+:root.dark-theme {
+  --color-bg-primary: #0f172a;
+  --color-bg-secondary: #1e293b;
+  --color-bg-tertiary: #334155;
+  
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #cbd5e1;
+  --color-text-tertiary: #64748b;
+  
+  --color-border: #475569;
+  --color-border-hover: #64748b;
+  
+  --color-button-disabled: #334155;
+  --color-button-disabled-text: #64748b;
 }
 
 /* Mobile breakpoints */

@@ -16,6 +16,7 @@ export function useUrlSync(skillPlanner) {
       return;
     }
 
+    // If there's no URL path, don't override localStorage autosave
     if (!currentPath || currentPath === '/') return;
 
     ReactGA.event({
@@ -33,6 +34,7 @@ export function useUrlSync(skillPlanner) {
       const parsed = JSON.parse(unpackedString);
 
       if (parsed?.jobId && parsed?.skillLevels) {
+        // URL build takes precedence over localStorage
         skillPlanner.loadBuild(parsed.jobId, parsed.skillLevels);
         skillPlanner.setCopySuccess('Imported!');
         

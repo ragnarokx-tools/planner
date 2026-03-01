@@ -1,19 +1,27 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import './App.css';
 import Job from './components/job/Job.js';
+import SkillSummary from './components/skillsummary/SkillSummary.js';
 import { useNavigate } from 'react-router-dom';
 import ReactGA from "react-ga4";
 import GitHubButton from 'react-github-btn';
 import { useSkillPlanner } from './hooks/useSkillPlanner';
 import { useUrlSync } from './hooks/useUrlSync';
+import { useTheme } from './hooks/useTheme';
 
 function App() {
   const navigate = useNavigate();
   const skillPlanner = useSkillPlanner();
   const { saveBuild } = useUrlSync(skillPlanner);
+  const { theme, toggleTheme } = useTheme();
 
   // Initialize Google Analytics
   useEffect(() => {
+    // Only initialize in production
+    if (process.env.NODE_ENV !== 'production') {
+      return;
+    }
+
     try {
       setTimeout(() => {
         ReactGA.initialize("G-10CRLLHRXZ");
@@ -67,6 +75,19 @@ function App() {
         <div className="App-jobButtons">
           <button onClick={saveBuild}>save</button>
           <button onClick={handleResetSkills}>reset</button>
+        </div>
+        
+        <div className="App-secondaryButtons">
+          <SkillSummary 
+            skillLevels={skillPlanner.skillLevels}
+            skills={skillPlanner.currentSkills}
+            onSaveBuild={saveBuild}
+            totalSkillPoints={skillPlanner.totalSkillPoints}
+            jobName={skillPlanner.currentJob?.name}
+          />
+          <button onClick={toggleTheme} title="Toggle theme">
+            {theme === 'light' ? '🌙' : '☀️'}
+          </button>
         </div>
         
         {skillPlanner.copySuccess && (

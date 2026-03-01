@@ -61,6 +61,10 @@
   transform: translateX(-50%);
 }
 
+.Job-connector.is-met::before {
+  background-color: var(--color-success) !important;
+}
+
 .Job-connector hr {
   position: absolute;
   left: 50%;

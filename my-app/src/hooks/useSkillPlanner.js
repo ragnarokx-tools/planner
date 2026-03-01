@@ -1,11 +1,31 @@
-import { useReducer, useMemo } from 'react';
+import { useReducer, useMemo, useEffect } from 'react';
 import jobData from '../resources/jobs.json';
 import skillData from '../resources/skills.json';
+
+const STORAGE_KEY = 'skillPlanner_autosave';
 
 const initialState = {
   jobId: 1,
   skillLevels: {},
   copySuccess: ''
+};
+
+// Load from localStorage if available
+const loadInitialState = () => {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      return {
+        ...initialState,
+        jobId: parsed.jobId || initialState.jobId,
+        skillLevels: parsed.skillLevels || initialState.skillLevels
+      };
+    }
+  } catch (error) {
+    console.error('Failed to load autosave:', error);
+  }
+  return initialState;
 };
 
 const actionTypes = {
@@ -71,7 +91,19 @@ function skillPlannerReducer(state, action) {
 }
 
 export function useSkillPlanner() {
-  const [state, dispatch] = useReducer(skillPlannerReducer, initialState);
+  const [state, dispatch] = useReducer(skillPlannerReducer, null, loadInitialState);
+
+  // Auto-save to localStorage whenever state changes
+  useEffect(() => {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({
+        jobId: state.jobId,
+        skillLevels: state.skillLevels
+      }));
+    } catch (error) {
+      console.error('Failed to autosave:', error);
+    }
+  }, [state.jobId, state.skillLevels]);
 
   // Memoized job data
   const currentJob = useMemo(() => {
@@ -120,6 +152,12 @@ export function useSkillPlanner() {
 
     resetSkills: () => {
       dispatch({ type: actionTypes.RESET_SKILLS });
+      // Clear localStorage on reset
+      try {
+        localStorage.removeItem(STORAGE_KEY);
+      } catch (error) {
+        console.error('Failed to clear autosave:', error);
+      }
     },
 
     loadBuild: (jobId, skillLevels) => {
